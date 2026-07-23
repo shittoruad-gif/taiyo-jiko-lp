@@ -8,170 +8,199 @@
 <meta name="description" content="埼玉県越谷・川口の交通事故によるむちうち・首や腰の痛みの施術なら、たいよう鍼灸整骨院へ。自賠責保険適用で窓口負担0円。国家資格者が施術、病院との併院・転院もOK。夜21時まで受付・3店舗で通いやすい。慰謝料の目安が分かる計算シミュレーター付き。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --blue:#1866c0;
-  --blue-dark:#0f4c94;
-  --navy:#0d3260;
-  --navy-deep:#092345;
-  --sky:#eaf3fc;
-  --sky-2:#f4f9ff;
-  --orange:#f07a1d;
+  --orange:#f57c1f;
   --orange-dark:#d96a10;
-  --red:#d92b1f;
+  --orange-deep:#c25c08;
+  --orange-pale:#fdeedd;
+  --cream:#fdf6ec;
+  --grid-line:#eee9dc;
+  --dot:#f5c99a;
+  --marker:#ffe479;
   --line-green:#06c755;
   --line-green-dark:#00a63f;
-  --border:#dbe6f2;
-  --text:#26313d;
+  --text:#222222;
+  --text-soft:#555555;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
-  font-family:'Noto Sans JP',sans-serif;
+  font-family:'Zen Maru Gothic','Noto Sans JP',sans-serif;
   color:var(--text);
   background:#fff;
-  line-height:1.8;
-  font-size:16px;
+  line-height:1.9;
+  font-size:16.5px;
   overflow-x:hidden;
 }
 img,svg,iframe{max-width:100%;display:block;}
 .wrap{max-width:720px;margin:0 auto;padding:0 20px;}
-section{padding:56px 0;scroll-margin-top:70px;}
+section{padding:52px 0 56px;scroll-margin-top:64px;}
 
 /* ===== header ===== */
 .header{
   position:sticky;top:0;z-index:100;
   background:rgba(255,255,255,.97);
   backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--border);
+  border-bottom:2px solid var(--orange-pale);
 }
 .header-in{
   max-width:720px;margin:0 auto;
-  display:flex;align-items:center;justify-content:space-between;
-  gap:8px;padding:8px 14px;
+  display:flex;align-items:center;justify-content:center;
+  padding:10px 16px;text-align:center;
 }
-.logo{display:flex;flex-direction:column;line-height:1.3;min-width:0;}
-.logo b{font-size:16px;color:var(--blue-dark);letter-spacing:.02em;white-space:nowrap;}
-.logo span{font-size:10px;color:#7d8a99;letter-spacing:.06em;}
-.header-btns{display:flex;gap:6px;flex-shrink:0;}
-.header-btn{
-  display:flex;align-items:center;gap:5px;
-  padding:8px 12px;border-radius:999px;
-  text-decoration:none;font-weight:700;font-size:12.5px;
+.logo{display:flex;flex-direction:column;line-height:1.35;}
+.logo b{font-size:17px;color:var(--text);letter-spacing:.03em;white-space:nowrap;font-weight:900;}
+.logo b .lg-em{color:var(--orange);}
+.logo span{font-size:10.5px;color:#9a8f7f;letter-spacing:.08em;font-family:'Noto Sans JP',sans-serif;}
+
+/* ===== 見出し2種 ===== */
+/* (a) オレンジ帯型 */
+.band-title{
+  background:var(--orange);
+  color:#fff;text-align:center;
+  font-weight:900;
+  font-size:clamp(20px,5.4vw,27px);
+  line-height:1.55;
+  padding:20px 18px;
+  position:relative;
+  letter-spacing:.03em;
+}
+.band-title::after{
+  content:"";position:absolute;left:50%;bottom:-16px;
+  transform:translateX(-50%);
+  border:17px solid transparent;
+  border-top:16px solid var(--orange);
+  border-bottom:none;
+  z-index:5;
+}
+.band-sec{padding-top:0;}
+.band-sec .wrap{padding-top:46px;}
+
+/* (b) テキスト型 */
+.t-title{text-align:center;margin-bottom:30px;line-height:1.5;}
+.t-title .small{
+  display:block;font-size:clamp(14px,3.8vw,17px);
+  font-weight:700;color:var(--text);letter-spacing:.05em;
+  margin-bottom:2px;
+}
+.t-title .big{
+  display:inline-block;
+  font-size:clamp(23px,6.4vw,32px);
+  font-weight:900;color:var(--orange);
+  padding-bottom:8px;
+  border-bottom:4px dotted var(--dot);
+}
+
+/* ===== FV ===== */
+.fv{background:#fff;padding:26px 0 0;}
+.fv-in{max-width:720px;margin:0 auto;padding:0 18px;text-align:center;}
+.fv-clinic{
+  font-weight:900;font-size:clamp(19px,5.6vw,28px);
+  letter-spacing:.04em;line-height:1.5;color:var(--text);
+}
+.fv-clinic .area{font-size:.72em;display:inline-block;margin-right:.4em;}
+.fv-clinic .name{color:var(--orange);}
+.fv-lead{
+  margin-top:6px;
+  font-weight:700;font-size:clamp(13.5px,3.8vw,17px);
+  color:var(--text);line-height:1.7;
+}
+.fv-lead .em{color:var(--orange);font-weight:900;}
+.fv-catch{
+  margin-top:12px;
+  font-weight:900;
+  font-size:clamp(23px,6.6vw,36px);
+  line-height:1.5;color:var(--text);
+}
+.fv-catch .em{color:var(--orange);font-size:1.1em;}
+.fv-main{
+  margin-top:18px;
+  display:grid;grid-template-columns:42% 1fr;gap:12px;
+  align-items:stretch;text-align:left;
+}
+.fv-photo{
+  border:3px solid var(--orange);
+  border-radius:18px;overflow:hidden;
+  background:var(--cream);
+  align-self:stretch;
+}
+.fv-photo img{width:100%;height:100%;object-fit:cover;object-position:center 25%;}
+.fv-points{display:flex;flex-direction:column;gap:9px;}
+.fv-point{
+  background:#fff;
+  border:2.5px solid var(--orange);
+  border-radius:14px;
+  padding:9px 12px;
+  display:flex;align-items:center;gap:9px;
+  font-weight:900;font-size:clamp(13px,3.7vw,17px);
+  line-height:1.45;color:var(--text);
+  flex:1;
+}
+.fv-point .ic{width:28px;height:28px;flex-shrink:0;}
+.fv-point .zero{
+  width:52px;height:52px;flex-shrink:0;border-radius:50%;
+  background:var(--orange);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:19px;line-height:1;
+  letter-spacing:-.02em;
+}
+.fv-point .marker{background:linear-gradient(transparent 55%,var(--marker) 55%);}
+.fv-point small{display:block;font-size:10px;font-weight:700;color:var(--text-soft);line-height:1.45;}
+
+.fv-gold{
+  margin-top:22px;
+  background:var(--cream);
+  padding:26px 16px 24px;
+  text-align:center;
+}
+.gold-line{
+  display:block;
+  font-weight:900;
+  font-size:clamp(30px,9vw,50px);
+  line-height:1.35;letter-spacing:.02em;
+  background:linear-gradient(180deg,#fff3bd 0%,#f6c94e 38%,#d89a10 62%,#f9df80 100%);
+  -webkit-background-clip:text;background-clip:text;
+  color:transparent;
+  filter:drop-shadow(0 2px 0 #a06d06) drop-shadow(0 4px 3px rgba(120,80,0,.35)) drop-shadow(0 0 1px #fff);
+}
+.fv-note{
+  margin-top:14px;
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:11px;color:#9a8f7f;line-height:1.7;
+}
+
+/* ===== CTA帯＋ボタン ===== */
+.cta-band{
+  display:block;
+  background:var(--orange);
+  color:#fff;text-decoration:none;
+  text-align:center;
+  font-weight:900;font-size:clamp(14.5px,4.2vw,22px);
+  padding:16px 10px;
+  letter-spacing:.02em;line-height:1.5;
   white-space:nowrap;
 }
-.header-btn svg{width:15px;height:15px;flex-shrink:0;}
-.header-btn.store{
-  background:var(--blue);color:#fff;
-  box-shadow:0 3px 8px rgba(24,102,192,.3);
-}
-.header-btn.line{
-  background:var(--line-green);color:#fff;
-  box-shadow:0 3px 8px rgba(6,199,85,.3);
-}
-@media(max-width:400px){
-  .logo b{font-size:14.5px;}
-  .header-btn{padding:8px 10px;font-size:12px;}
-}
-
-/* ===== hero ===== */
-.hero{
-  position:relative;
-  background:url("images/hero.jpg") center 32%/cover no-repeat;
-}
-.hero::before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(255,255,255,.78) 0%,rgba(255,255,255,.42) 40%,rgba(234,243,252,.6) 72%,#eaf3fc 97%);
-}
-.hero-in{
-  position:relative;z-index:2;
-  max-width:720px;margin:0 auto;
-  padding:32px 20px 28px;
-  text-align:center;
-}
-.hero-lead{
-  display:inline-block;
-  background:var(--blue);color:#fff;
-  font-weight:700;font-size:15px;
-  padding:6px 24px;border-radius:999px;
-  letter-spacing:.08em;
-  margin-bottom:14px;
-  box-shadow:0 3px 10px rgba(15,76,148,.35);
-}
-.hero h1{
-  font-size:clamp(26px,7.2vw,42px);
-  font-weight:900;
-  color:var(--navy);
-  line-height:1.45;
-  letter-spacing:.02em;
-  text-shadow:2px 2px 0 #fff,-2px 2px 0 #fff,2px -2px 0 #fff,-2px -2px 0 #fff,0 3px 12px rgba(255,255,255,.9);
-}
-.hero h1 .em{color:var(--orange);font-size:1.12em;}
-.hero-sub{
-  margin-top:10px;
-  font-size:clamp(14px,3.9vw,17px);
-  font-weight:700;color:#33475e;
-  text-shadow:1px 1px 0 #fff,-1px 1px 0 #fff,1px -1px 0 #fff,-1px -1px 0 #fff,0 2px 8px rgba(255,255,255,.9);
-}
-.zero-box{
-  margin:20px auto 0;
-  display:inline-block;
-  background:#fff;
-  border:3px solid var(--red);
-  border-radius:16px;
-  padding:12px 34px 15px;
-  text-align:center;
-  box-shadow:0 8px 22px rgba(30,60,110,.22);
-}
-.zero-box .zl{font-size:13.5px;font-weight:700;color:var(--navy);letter-spacing:.04em;}
-.zero-box .zn{
-  font-size:48px;font-weight:900;color:var(--red);
-  line-height:1.05;letter-spacing:.02em;
-  font-family:'Zen Maru Gothic',sans-serif;
-}
-.zero-box .zn small{font-size:21px;}
-.hero-badges{
-  display:flex;justify-content:center;gap:10px;margin-top:20px;flex-wrap:wrap;
-}
-.hero-badge{
-  width:94px;height:94px;border-radius:50%;
-  background:#fff;
-  border:2.5px solid var(--blue);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  font-size:11px;font-weight:700;color:var(--navy);
-  text-align:center;line-height:1.4;
-  box-shadow:0 4px 12px rgba(30,60,110,.18);
-}
-.hero-badge b{font-size:14px;color:var(--orange);}
-.hero-note{
-  position:relative;z-index:2;
-  background:var(--navy-deep);
-  color:#bcd3ea;font-size:11px;
-  text-align:center;padding:8px 16px;line-height:1.7;
-}
-
-/* ===== CTA ===== */
 .cta{
-  background:linear-gradient(180deg,#fff7ec,#ffefdb);
-  border-top:1px solid #f3ddc0;border-bottom:1px solid #f3ddc0;
-  padding:32px 0 36px;scroll-margin-top:70px;
+  background:var(--cream);
+  padding:30px 0 40px;scroll-margin-top:64px;
 }
-.cta-strong{background:linear-gradient(180deg,var(--navy),var(--navy-deep));border:none;}
-.cta-strong .cta-title{color:#fff;}
-.cta-strong .cta-note{color:#9db8d4;}
 .cta-title{
   text-align:center;font-weight:900;
-  font-size:clamp(18px,5vw,23px);color:var(--navy);
-  margin-bottom:4px;line-height:1.55;
+  font-size:clamp(18px,5.2vw,24px);color:var(--text);
+  margin-bottom:4px;line-height:1.6;
 }
 .cta-title .em{color:var(--orange);}
-.cta-strong .cta-title .em{color:#ffb066;}
-.cta-note{text-align:center;font-size:12.5px;color:#8a7a5e;margin-bottom:18px;line-height:1.7;}
+.cta-note{
+  text-align:center;font-size:13px;color:#8a7a5e;
+  margin-bottom:18px;line-height:1.8;
+  font-family:'Noto Sans JP',sans-serif;
+}
 .cta-btns{display:flex;flex-direction:column;gap:12px;max-width:480px;margin:0 auto;}
 .btn{
   display:flex;align-items:center;justify-content:center;gap:10px;
-  border-radius:14px;text-decoration:none;
+  border-radius:16px;text-decoration:none;
   font-weight:900;padding:15px 20px;
   font-size:17px;letter-spacing:.02em;
   transition:transform .15s ease;
@@ -180,21 +209,16 @@ section{padding:56px 0;scroll-margin-top:70px;}
 .btn:active{transform:scale(.97);}
 .btn svg{width:24px;height:24px;flex-shrink:0;}
 .btn-line{
-  background:linear-gradient(180deg,#06c755,#00a63f);
+  background:var(--line-green);
   color:#fff;
-  box-shadow:0 5px 0 #007c30,0 9px 18px rgba(0,166,63,.35);
+  box-shadow:0 4px 0 #049a43,0 7px 14px rgba(6,199,85,.28);
 }
 .btn-store{
-  background:linear-gradient(180deg,#2f83e0,var(--blue-dark));
+  background:var(--orange);
   color:#fff;
-  box-shadow:0 5px 0 #0a3a72,0 9px 18px rgba(24,102,192,.35);
+  box-shadow:0 4px 0 var(--orange-deep),0 7px 14px rgba(245,124,31,.3);
 }
-.btn-tel{
-  background:linear-gradient(180deg,#ff9438,var(--orange));
-  color:#fff;
-  box-shadow:0 5px 0 #b85c0d,0 9px 18px rgba(240,122,29,.35);
-}
-.btn small{display:block;font-size:11px;font-weight:500;opacity:.92;}
+.btn small{display:block;font-size:11px;font-weight:700;opacity:.92;font-family:'Noto Sans JP',sans-serif;}
 .btn .btn-inner{display:flex;flex-direction:column;align-items:flex-start;line-height:1.35;}
 .btn .arrow{
   position:absolute;right:16px;top:50%;
@@ -203,128 +227,151 @@ section{padding:56px 0;scroll-margin-top:70px;}
   transform:translateY(-50%) rotate(45deg);
 }
 
-/* ===== sections common ===== */
-.sec-label{
-  text-align:center;font-size:12px;font-weight:700;
-  color:var(--orange);letter-spacing:.25em;margin-bottom:6px;
-}
-.sec-title{
-  text-align:center;font-weight:900;
-  font-size:clamp(22px,6vw,30px);
-  color:var(--navy);line-height:1.5;
-  margin-bottom:28px;
-}
-.sec-title .em{color:var(--orange);}
-.sec-title .marker{background:linear-gradient(transparent 62%,#ffe08a 62%);}
+/* ===== 写真枠 ===== */
 .photo{
-  border-radius:16px;overflow:hidden;
-  box-shadow:0 6px 18px rgba(30,60,110,.15);
-  margin-bottom:22px;
+  border-radius:20px;overflow:hidden;
+  border:1px solid #f0e6d6;
+  box-shadow:0 4px 14px rgba(160,120,60,.12);
+  margin-bottom:24px;
 }
 .photo img{width:100%;height:auto;}
 
-/* 悩み */
-.nayami{background:var(--sky-2);}
-.nayami-list{display:flex;flex-direction:column;gap:10px;margin-bottom:22px;}
+/* ===== 悩みチェックリスト ===== */
+.nayami{background:var(--cream);}
+.nayami-list{display:flex;flex-direction:column;gap:12px;margin-bottom:26px;}
 .nayami-item{
-  background:#fff;border:1px solid var(--border);
-  border-radius:12px;padding:14px 16px;
-  display:flex;align-items:center;gap:12px;
-  font-weight:700;font-size:15px;
-  box-shadow:0 2px 6px rgba(30,60,110,.06);
+  background:#fff;
+  border-radius:14px;padding:15px 16px 15px 14px;
+  display:flex;align-items:center;gap:14px;
+  font-weight:700;font-size:clamp(15px,4.3vw,18px);
+  line-height:1.6;color:var(--text);
+  box-shadow:0 2px 8px rgba(160,120,60,.08);
 }
 .nayami-item .chk{
-  width:26px;height:26px;flex-shrink:0;border-radius:6px;
-  background:var(--orange);display:flex;align-items:center;justify-content:center;
+  width:30px;height:30px;flex-shrink:0;
+  border:3px solid var(--orange);border-radius:8px;
+  background:#fff;position:relative;
 }
-.nayami-item .chk svg{width:16px;height:16px;}
+.nayami-item .chk svg{
+  position:absolute;left:-3px;top:-10px;
+  width:36px;height:36px;
+  transform:rotate(-6deg);
+}
 .nayami-close{
   text-align:center;font-weight:900;
-  font-size:clamp(17px,4.6vw,21px);color:var(--navy);
-  background:#fff;border:2.5px dashed var(--orange);
-  border-radius:14px;padding:18px 16px;line-height:1.7;
+  font-size:clamp(17px,4.8vw,22px);color:var(--text);
+  background:#fff;border:3px dashed var(--orange);
+  border-radius:18px;padding:20px 16px;line-height:1.8;
 }
 .nayami-close .em{color:var(--orange);font-size:1.12em;}
 
-/* 3つの理由 */
-.reason-cards{display:flex;flex-direction:column;gap:16px;}
+/* ===== 3つの理由（方眼カード＋台形タグ） ===== */
+.reason-cards{display:flex;flex-direction:column;gap:22px;}
 .reason-card{
-  background:#fff;border:1px solid var(--border);
-  border-top:5px solid var(--blue);
-  border-radius:14px;padding:20px 18px 18px;
-  box-shadow:0 4px 14px rgba(30,60,110,.08);
-  position:relative;
+  background-color:#fffdf7;
+  background-image:
+    repeating-linear-gradient(0deg,var(--grid-line) 0 1px,transparent 1px 18px),
+    repeating-linear-gradient(90deg,var(--grid-line) 0 1px,transparent 1px 18px);
+  border:1px solid #efe7d5;
+  border-radius:18px;
+  padding:0 18px 20px;
+  overflow:hidden;
 }
-.reason-num{
-  position:absolute;top:-18px;left:16px;
-  width:40px;height:40px;border-radius:50%;
+.reason-tag{
+  display:flex;align-items:flex-start;
+  margin:0 -18px 14px;
+  position:relative;height:56px;
+}
+.reason-tag .tag{
   background:var(--orange);color:#fff;
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:19px;
-  box-shadow:0 4px 10px rgba(240,122,29,.4);
-  border:3px solid #fff;
+  font-weight:700;font-size:clamp(12px,3.4vw,14px);
+  line-height:1.3;
+  padding:10px 58px 10px 16px;
+  clip-path:polygon(0 0,100% 0,calc(100% - 22px) 100%,0 100%);
+  display:flex;align-items:center;
+  height:44px;
+}
+.reason-tag .num{
+  position:absolute;
+  left:min(62vw,300px);top:4px;
+  font-weight:900;font-size:44px;line-height:1;
+  color:#fff;
+  text-shadow:0 0 4px var(--orange),2px 2px 0 var(--orange),-2px 2px 0 var(--orange),2px -2px 0 var(--orange),-2px -2px 0 var(--orange),0 4px 8px rgba(194,92,8,.4);
 }
 .reason-card h3{
-  font-size:17px;color:var(--blue-dark);
-  margin:4px 0 8px;padding-left:34px;line-height:1.5;
+  font-size:clamp(18px,5.2vw,23px);
+  font-weight:900;color:var(--orange);
+  line-height:1.55;margin-bottom:12px;
+  text-align:center;
 }
-.reason-card p{font-size:14px;}
+.reason-visual{
+  max-width:340px;margin:0 auto 14px;
+  border-radius:14px;overflow:hidden;
+}
+.reason-visual img{width:100%;height:auto;}
+.reason-visual.svgbox{
+  background:#fff;border:1px solid #f0e6d6;border-radius:16px;
+  padding:14px 0;
+}
+.reason-visual.svgbox svg{width:150px;height:120px;margin:0 auto;}
+.reason-card p{
+  font-size:14.5px;font-family:'Noto Sans JP',sans-serif;
+  line-height:1.9;
+}
 .reason-card p b{color:var(--orange-dark);}
 .reason-close{
-  margin-top:22px;text-align:center;
-  font-weight:900;font-size:clamp(16px,4.4vw,19px);
-  color:var(--navy);line-height:1.8;
+  margin-top:26px;text-align:center;
+  font-weight:900;font-size:clamp(16px,4.6vw,20px);
+  color:var(--text);line-height:1.9;
 }
-.reason-close .em{color:var(--red);background:linear-gradient(transparent 62%,#ffd9d5 62%);}
+.reason-close .em{color:var(--orange);background:linear-gradient(transparent 60%,var(--orange-pale) 60%);}
 
-/* ===== 慰謝料シミュレーター ===== */
-.sim{background:linear-gradient(180deg,var(--blue-dark),var(--navy));}
-.sim .sec-label{color:#ffc98f;}
-.sim .sec-title{color:#fff;}
+/* ===== 慰謝料計算 ===== */
+.sim{background:var(--cream);}
 .sim-intro{
-  text-align:center;color:#d5e5f6;font-size:14px;
-  margin:-14px auto 24px;max-width:560px;line-height:1.8;
+  text-align:center;color:var(--text-soft);font-size:14px;
+  margin:-14px auto 26px;max-width:560px;line-height:1.9;
+  font-family:'Noto Sans JP',sans-serif;
 }
 .sim-card{
-  background:#fff;border-radius:20px;
+  background:#fff;border-radius:22px;
   padding:26px 20px 24px;
-  box-shadow:0 14px 40px rgba(0,0,0,.3);
+  box-shadow:0 8px 24px rgba(160,120,60,.14);
   max-width:520px;margin:0 auto;
 }
 .sim-card-head{
   display:flex;align-items:center;justify-content:center;gap:10px;
-  font-weight:900;font-size:17px;color:var(--navy);
+  font-weight:900;font-size:17px;color:var(--orange);
   margin-bottom:20px;padding-bottom:14px;
-  border-bottom:2px solid var(--sky);
+  border-bottom:3px dotted var(--dot);
 }
 .sim-card-head svg{width:26px;height:26px;flex-shrink:0;}
 .sim-field{margin-bottom:16px;}
 .sim-field label{
-  display:flex;align-items:center;gap:8px;
-  font-weight:700;font-size:14px;color:var(--navy);
+  display:block;
+  font-weight:900;font-size:15px;color:var(--text);
   margin-bottom:6px;
-}
-.sim-field label .fn{
-  background:var(--blue);color:#fff;border-radius:6px;
-  font-size:11px;font-weight:900;padding:2px 8px;line-height:1.5;flex-shrink:0;
 }
 .sim-field input{
   width:100%;
   font-family:inherit;font-size:17px;font-weight:700;color:var(--text);
   padding:13px 14px;
-  border:2px solid var(--border);border-radius:12px;
-  background:var(--sky-2);
+  border:2px solid #f0dfc6;border-radius:14px;
+  background:var(--cream);
   -webkit-appearance:none;appearance:none;
 }
-.sim-field input:focus{outline:none;border-color:var(--blue);background:#fff;}
-.sim-field .hint{font-size:11.5px;color:#7d8a99;margin-top:4px;}
+.sim-field input:focus{outline:none;border-color:var(--orange);background:#fff;}
+.sim-field .hint{
+  font-size:11.5px;color:#9a8f7f;margin-top:4px;
+  font-family:'Noto Sans JP',sans-serif;
+}
 .sim-btn{
   width:100%;
   font-family:inherit;font-size:19px;font-weight:900;letter-spacing:.05em;
-  color:#fff;background:linear-gradient(180deg,#ff9438,var(--orange));
-  border:none;border-radius:14px;
+  color:#fff;background:var(--orange);
+  border:none;border-radius:16px;
   padding:16px;cursor:pointer;
-  box-shadow:0 5px 0 #b85c0d,0 9px 18px rgba(240,122,29,.35);
+  box-shadow:0 4px 0 var(--orange-deep),0 8px 16px rgba(245,124,31,.3);
   transition:transform .15s ease;
   display:flex;align-items:center;justify-content:center;gap:10px;
 }
@@ -336,14 +383,15 @@ section{padding:56px 0;scroll-margin-top:70px;}
   background:#fdf0ef;border:1.5px solid #f0c3bf;border-radius:12px;
   color:#b3271c;font-size:13.5px;font-weight:700;
   padding:12px 14px;line-height:1.7;
+  font-family:'Noto Sans JP',sans-serif;
 }
 .sim-error.show{display:block;}
 .sim-result{
   display:none;
   margin-top:18px;
-  background:linear-gradient(180deg,#fff8f0,#fff2e2);
-  border:2.5px solid var(--orange);
-  border-radius:16px;
+  background:var(--cream);
+  border:3px solid var(--orange);
+  border-radius:18px;
   padding:18px 16px 16px;
   text-align:center;
 }
@@ -352,84 +400,86 @@ section{padding:56px 0;scroll-margin-top:70px;}
   0%{transform:scale(.92);opacity:0;}
   100%{transform:scale(1);opacity:1;}
 }
-.sim-result .rl{font-size:13.5px;font-weight:700;color:var(--navy);}
+.sim-result .rl{font-size:13.5px;font-weight:700;color:var(--text);}
 .sim-result .rn{
-  font-family:'Zen Maru Gothic',sans-serif;
-  font-size:clamp(38px,10vw,50px);font-weight:900;color:var(--red);
+  font-size:clamp(38px,10vw,50px);font-weight:900;color:var(--orange);
   line-height:1.2;letter-spacing:.01em;
 }
 .sim-result .rn small{font-size:.45em;}
 .sim-result .rd{
   margin-top:10px;
-  background:#fff;border:1px dashed #e2c9a8;border-radius:10px;
+  background:#fff;border:1px dashed #e2c9a8;border-radius:12px;
   padding:10px 12px;
-  font-size:12.5px;color:#5c6b7c;text-align:left;line-height:1.8;
+  font-size:12.5px;color:#5c554a;text-align:left;line-height:1.8;
+  font-family:'Noto Sans JP',sans-serif;
 }
-.sim-result .rd b{color:var(--blue-dark);}
+.sim-result .rd b{color:var(--orange-dark);}
 .sim-formula{
-  margin:22px auto 0;max-width:520px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.2);
-  border-radius:14px;padding:16px 18px;
-  color:#d5e5f6;font-size:13px;line-height:1.9;
+  margin:24px auto 0;max-width:520px;
+  background:#fff;
+  border:2px solid var(--orange);
+  border-radius:16px;padding:16px 18px;
+  color:var(--text);font-size:13px;line-height:1.9;
+  font-family:'Noto Sans JP',sans-serif;
 }
-.sim-formula b{color:#ffd9ad;}
+.sim-formula b{color:var(--orange-dark);}
 .sim-note{
   margin:14px auto 0;max-width:520px;
-  color:#a8c2de;font-size:11.5px;line-height:1.8;
+  color:#9a8f7f;font-size:11.5px;line-height:1.8;
+  font-family:'Noto Sans JP',sans-serif;
 }
 
-/* 4つの安心 */
-.anshin-list{display:flex;flex-direction:column;gap:18px;}
+/* ===== 4つの安心 ===== */
+.anshin-list{display:flex;flex-direction:column;gap:20px;}
 .anshin{
-  background:#fff;border:1px solid var(--border);border-radius:16px;
-  overflow:hidden;box-shadow:0 4px 14px rgba(30,60,110,.08);
+  background:#fff;border:2px solid var(--orange);border-radius:18px;
+  overflow:hidden;
 }
 .anshin-photo img{width:100%;height:190px;object-fit:cover;}
 .anshin-photo.tall img{height:230px;object-position:center 20%;}
 .anshin-head{
   display:flex;align-items:center;gap:12px;
-  padding:14px 18px;background:linear-gradient(90deg,var(--sky),var(--sky-2));
-  border-bottom:1px solid var(--border);
+  padding:14px 18px;background:var(--orange-pale);
+  border-bottom:1px solid #f6ddc0;
 }
 .anshin-num{
-  font-family:'Zen Maru Gothic',sans-serif;
   font-size:13px;font-weight:900;color:#fff;
-  background:var(--blue);border-radius:8px;
-  padding:4px 9px;line-height:1;flex-shrink:0;
+  background:var(--orange);border-radius:8px;
+  padding:5px 9px;line-height:1;flex-shrink:0;
 }
-.anshin-head h3{font-size:17px;color:var(--navy);line-height:1.5;}
-.anshin-body{padding:16px 18px;font-size:14px;}
+.anshin-head h3{font-size:16.5px;color:var(--orange-dark);line-height:1.5;font-weight:900;}
+.anshin-body{padding:16px 18px;font-size:14px;font-family:'Noto Sans JP',sans-serif;line-height:1.9;}
 .anshin-body b{color:var(--orange-dark);}
 
-/* 補償の知識 */
-.hosho{background:var(--sky-2);}
+/* ===== 補償の知識 ===== */
+.hosho{background:var(--cream);}
 .hosho-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:12px;
+  display:grid;grid-template-columns:1fr 1fr;gap:14px;
 }
 .hosho-card{
-  background:#fff;border:1px solid var(--border);border-radius:14px;
+  background:#fff;border-radius:18px;
   padding:18px 14px 16px;
-  box-shadow:0 3px 10px rgba(30,60,110,.07);
+  box-shadow:0 3px 10px rgba(160,120,60,.1);
   text-align:center;
 }
 .hosho-card .ico{
-  width:52px;height:52px;margin:0 auto 10px;border-radius:50%;
-  background:var(--sky);display:flex;align-items:center;justify-content:center;
+  width:54px;height:54px;margin:0 auto 10px;border-radius:50%;
+  background:var(--orange-pale);display:flex;align-items:center;justify-content:center;
 }
 .hosho-card .ico svg{width:28px;height:28px;}
-.hosho-card h3{font-size:15.5px;color:var(--blue-dark);margin-bottom:6px;}
-.hosho-card p{font-size:12.5px;text-align:left;line-height:1.75;}
-.hosho-card p b{color:var(--red);}
+.hosho-card h3{font-size:16px;color:var(--orange);margin-bottom:6px;font-weight:900;}
+.hosho-card p{font-size:12.5px;text-align:left;line-height:1.85;font-family:'Noto Sans JP',sans-serif;}
+.hosho-card p b{color:var(--orange-dark);}
 .hosho-note{
-  margin-top:16px;font-size:11.5px;color:#7d8a99;line-height:1.8;
+  margin-top:16px;font-size:11.5px;color:#9a8f7f;line-height:1.8;
+  font-family:'Noto Sans JP',sans-serif;
 }
 @media(max-width:480px){
   .hosho-grid{grid-template-columns:1fr;}
   .hosho-card p{font-size:13px;}
 }
 
-/* 流れ */
+/* ===== 流れ ===== */
 .flow-list{display:flex;flex-direction:column;}
 .flow-step{
   display:flex;gap:16px;position:relative;padding-bottom:26px;
@@ -437,141 +487,162 @@ section{padding:56px 0;scroll-margin-top:70px;}
 .flow-step:last-child{padding-bottom:0;}
 .flow-step::before{
   content:"";position:absolute;left:21px;top:46px;bottom:4px;
-  width:2px;background:#c9dcf0;
+  width:2px;background:var(--dot);
 }
 .flow-step:last-child::before{display:none;}
 .flow-num{
   width:44px;height:44px;flex-shrink:0;border-radius:50%;
-  background:var(--blue);color:#fff;
+  background:var(--orange);color:#fff;
   display:flex;align-items:center;justify-content:center;
-  font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:18px;
+  font-weight:900;font-size:18px;
   position:relative;z-index:1;
 }
-.flow-body{flex:1;background:var(--sky-2);border-radius:12px;padding:14px 16px;border:1px solid var(--border);}
-.flow-body h3{font-size:16px;color:var(--navy);margin-bottom:4px;}
-.flow-body p{font-size:14px;}
+.flow-body{flex:1;background:var(--cream);border-radius:16px;padding:14px 16px;}
+.flow-body h3{font-size:16px;color:var(--orange-dark);margin-bottom:4px;font-weight:900;}
+.flow-body p{font-size:14px;font-family:'Noto Sans JP',sans-serif;line-height:1.85;}
 .flow-body .tip{
-  margin-top:8px;font-size:12px;background:#fff;border-radius:8px;
+  margin-top:8px;font-size:12px;background:#fff;border-radius:10px;
   padding:8px 10px;color:#8a6b30;border:1px dashed #e0c98f;
 }
-.flow-body .zero{color:var(--red);font-weight:900;}
+.flow-body .zero{color:var(--orange);font-weight:900;}
 
-/* Q&A */
+/* ===== Q&A ===== */
 .qa-item{
-  background:#fff;border:1px solid var(--border);border-radius:12px;
+  background:#fff;border:2px solid var(--orange-pale);border-radius:14px;
   margin-bottom:12px;overflow:hidden;
 }
 .qa-item summary{
   list-style:none;cursor:pointer;
   display:flex;align-items:flex-start;gap:12px;
-  padding:16px;font-weight:700;font-size:15px;color:var(--navy);
+  padding:16px;font-weight:700;font-size:15px;color:var(--text);
 }
 .qa-item summary::-webkit-details-marker{display:none;}
 .qa-q,.qa-a{
   width:28px;height:28px;flex-shrink:0;border-radius:50%;
   display:flex;align-items:center;justify-content:center;
-  font-family:'Zen Maru Gothic',sans-serif;font-weight:900;color:#fff;font-size:14px;
+  font-weight:900;font-size:14px;
 }
-.qa-q{background:var(--blue);}
-.qa-a{background:var(--orange);}
+.qa-q{background:var(--orange);color:#fff;}
+.qa-a{background:#fff;color:var(--orange);border:2.5px solid var(--orange);}
 .qa-body{
   display:flex;gap:12px;padding:0 16px 16px;
-  font-size:14px;
+  font-size:14px;font-family:'Noto Sans JP',sans-serif;line-height:1.85;
 }
 .qa-toggle{margin-left:auto;color:var(--orange);font-weight:900;flex-shrink:0;transition:transform .2s;}
 details[open] .qa-toggle{transform:rotate(45deg);}
 
-/* 回復メッセージ */
-.kaifuku{background:var(--sky-2);padding:56px 0;}
+/* ===== 回復メッセージ ===== */
+.kaifuku{background:var(--cream);padding:52px 0;}
 .kaifuku-msg{
   text-align:center;font-weight:900;
-  font-size:clamp(17px,4.8vw,22px);color:var(--navy);line-height:1.9;
+  font-size:clamp(17px,4.8vw,23px);color:var(--text);line-height:2;
 }
 .kaifuku-msg .em{color:var(--orange);}
-.kaifuku-sub{text-align:center;font-size:14px;margin-top:12px;color:#4a5a6c;}
+.kaifuku-sub{text-align:center;font-size:14px;margin-top:12px;color:var(--text-soft);font-family:'Noto Sans JP',sans-serif;}
 
 /* ===== 店舗 ===== */
-.stores{background:linear-gradient(180deg,#fff,var(--sky));}
+.stores{background:#fff;}
+.hours-box{
+  background:var(--cream);border-radius:16px;
+  padding:16px 18px;margin-bottom:28px;
+  font-size:14.5px;text-align:center;line-height:1.9;
+}
+.hours-box b{color:var(--orange-dark);font-size:1.06em;}
+.hours-box .off{color:var(--orange);font-weight:900;}
 .store-card{
-  background:#fff;border:1px solid var(--border);border-radius:18px;
-  overflow:hidden;margin-bottom:26px;
-  box-shadow:0 6px 18px rgba(30,60,110,.12);
+  background:#fff;border:2px solid var(--orange);border-radius:20px;
+  margin-bottom:30px;overflow:hidden;
 }
-.store-head{
-  background:linear-gradient(90deg,var(--blue),var(--blue-dark));
-  color:#fff;padding:14px 18px;
-  display:flex;align-items:center;gap:10px;
+.store-body{padding:20px 18px 18px;}
+.store-card-title{
+  text-align:center;
+  font-weight:900;font-size:19px;color:var(--orange);
+  padding-bottom:8px;margin-bottom:6px;
+  border-bottom:3px dotted var(--dot);
 }
-.store-head .sn{
-  background:#fff;color:var(--blue-dark);
-  font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;
-  border-radius:8px;padding:3px 9px;flex-shrink:0;
+.store-name{
+  text-align:center;font-weight:900;
+  font-size:clamp(17px,4.9vw,21px);color:var(--text);
+  line-height:1.5;margin-bottom:2px;
 }
-.store-head h3{font-size:17px;line-height:1.4;}
-.store-head h3 small{display:block;font-size:11px;font-weight:500;opacity:.85;}
-.store-body{padding:18px;}
+.store-name small{
+  display:block;font-size:12px;font-weight:700;color:#9a8f7f;
+  font-family:'Noto Sans JP',sans-serif;
+}
+.store-info{margin:12px 0 16px;}
+.si-item{
+  padding:11px 2px;border-bottom:1px dashed #f2e3cc;
+}
+.si-item:last-child{border-bottom:none;}
+.si-label{
+  display:flex;align-items:center;gap:9px;
+  font-weight:900;font-size:14.5px;color:var(--text);
+}
+.si-label::before{
+  content:"";width:13px;height:13px;border-radius:50%;
+  background:#f7b52c;flex-shrink:0;
+}
+.si-value{
+  margin-top:2px;padding-left:22px;
+  font-size:14px;font-family:'Noto Sans JP',sans-serif;line-height:1.8;
+}
+.si-value .pk{color:var(--orange-dark);font-weight:700;}
 .store-tel{
   display:flex;align-items:center;justify-content:center;gap:10px;
-  background:linear-gradient(180deg,#ff9438,var(--orange));
+  background:var(--orange);
   color:#fff;text-decoration:none;
-  border-radius:14px;padding:14px 16px;
+  border-radius:16px;padding:14px 16px;
   font-weight:900;
-  box-shadow:0 5px 0 #b85c0d,0 8px 16px rgba(240,122,29,.3);
+  box-shadow:0 4px 0 var(--orange-deep),0 7px 14px rgba(245,124,31,.28);
   margin-bottom:10px;
   transition:transform .15s ease;
 }
 .store-tel:active{transform:scale(.97);}
 .store-tel svg{width:24px;height:24px;flex-shrink:0;}
 .store-tel .num{font-size:24px;letter-spacing:.02em;line-height:1.2;}
-.store-tel small{display:block;font-size:11px;font-weight:500;opacity:.92;}
+.store-tel small{display:block;font-size:11px;font-weight:700;opacity:.92;font-family:'Noto Sans JP',sans-serif;}
 .store-line{
   display:flex;align-items:center;justify-content:center;gap:10px;
-  background:linear-gradient(180deg,#06c755,#00a63f);
+  background:var(--line-green);
   color:#fff;text-decoration:none;
-  border-radius:14px;padding:13px 16px;
+  border-radius:16px;padding:13px 16px;
   font-weight:900;font-size:16px;
-  box-shadow:0 5px 0 #007c30,0 8px 16px rgba(0,166,63,.3);
+  box-shadow:0 4px 0 #049a43,0 7px 14px rgba(6,199,85,.26);
   margin-bottom:16px;
   transition:transform .15s ease;
 }
 .store-line:active{transform:scale(.97);}
 .store-line svg{width:22px;height:22px;flex-shrink:0;}
-.store-table{width:100%;border-collapse:collapse;font-size:13.5px;}
-.store-table th,.store-table td{
-  padding:10px 10px;border-bottom:1px solid var(--border);
-  vertical-align:top;text-align:left;line-height:1.7;
-}
-.store-table tr:last-child th,.store-table tr:last-child td{border-bottom:none;}
-.store-table th{width:30%;background:var(--sky-2);color:var(--navy);font-weight:700;white-space:nowrap;}
-.store-table .pk{color:var(--blue-dark);font-weight:700;}
-.store-map{margin-top:14px;border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+.store-map{margin-top:4px;border-radius:14px;overflow:hidden;border:1px solid #f0e6d6;}
 .store-map iframe{width:100%;height:260px;border:0;}
-.hours-box{
-  background:var(--sky-2);border:1px solid var(--border);border-radius:14px;
-  padding:16px 18px;margin-bottom:26px;
-  font-size:14px;text-align:center;
-}
-.hours-box b{color:var(--blue-dark);}
-.hours-box .off{color:var(--red);font-weight:700;}
 
-/* footer */
+/* ===== footer ===== */
 .footer{
-  background:var(--navy-deep);color:#9db8d4;
-  padding:28px 0 120px;text-align:center;font-size:12px;line-height:2;
+  background:var(--orange);color:#fff;
+  padding:30px 0 120px;text-align:center;font-size:12.5px;line-height:2;
+  font-family:'Noto Sans JP',sans-serif;
 }
-.footer b{color:#fff;font-size:15px;display:block;margin-bottom:6px;}
+.footer b{color:#fff;font-size:16px;display:block;margin-bottom:6px;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;}
 
-/* fixed bottom cta */
+/* ===== 固定フッターバー ===== */
 .fixed-cta{
   position:fixed;left:0;right:0;bottom:0;z-index:200;
-  background:rgba(9,35,69,.97);
-  padding:10px 12px calc(10px + env(safe-area-inset-bottom));
-  display:flex;gap:10px;max-width:100%;
-  box-shadow:0 -6px 20px rgba(0,0,0,.25);
+  background:var(--orange);
+  display:flex;
+  padding-bottom:env(safe-area-inset-bottom);
+  box-shadow:0 -4px 16px rgba(160,80,0,.3);
 }
-.fixed-cta .btn{flex:1;padding:12px 8px;font-size:14.5px;border-radius:12px;box-shadow:none;}
-.fixed-cta .btn small{font-size:10px;}
-.fixed-cta .btn svg{width:20px;height:20px;}
+.fixed-cta a{
+  flex:1;
+  display:flex;align-items:center;justify-content:center;gap:5px;
+  color:#fff;text-decoration:none;
+  font-weight:900;font-size:clamp(11.5px,3.2vw,15px);
+  padding:16px 3px;line-height:1.3;
+  letter-spacing:0;white-space:nowrap;
+}
+.fixed-cta a:first-child{border-right:2px solid rgba(255,255,255,.85);}
+.fixed-cta a svg{width:18px;height:18px;flex-shrink:0;}
+.fixed-cta a:active{background:var(--orange-dark);}
 
 @media(min-width:600px){
   .anshin-photo img{height:250px;}
@@ -584,46 +655,52 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 <header class="header">
   <div class="header-in">
     <div class="logo">
-      <b>たいよう鍼灸整骨院</b>
+      <b><span class="lg-em">たいよう</span>鍼灸整骨院</b>
       <span>越谷・川口｜交通事故施術ご案内ページ</span>
-    </div>
-    <div class="header-btns">
-      <a class="header-btn line" href="#line-cta">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
-        LINE相談
-      </a>
-      <a class="header-btn store" href="#stores">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
-        店舗一覧へ
-      </a>
     </div>
   </div>
 </header>
 
 <!-- ===== 1. FV ===== -->
-<div class="hero">
-  <div class="hero-in">
-    <span class="hero-lead">交通事故に遭われた方へ</span>
-    <h1>
-      その<span class="em">むちうち</span>・<br>
-      首や腰の痛み、<br>
-      我慢しないでください
-    </h1>
-    <p class="hero-sub">「レントゲンでは異常なし」でも、つらい症状には理由があります。</p>
-    <div class="zero-box">
-      <div class="zl">自賠責保険適用で窓口負担</div>
-      <div class="zn">0<small>円</small></div>
-    </div>
-    <div class="hero-badges">
-      <div class="hero-badge">国家資格者<br>在籍<b>安心</b></div>
-      <div class="hero-badge">夜<b>21時</b>まで<br>受付</div>
-      <div class="hero-badge">越谷・川口<br><b>3店舗</b></div>
+<div class="fv">
+  <div class="fv-in">
+    <p class="fv-clinic"><span class="area">越谷・川口</span><span class="name">たいよう鍼灸整骨院</span></p>
+    <p class="fv-lead">交通事故に遭われた方へ。<span class="em">国家資格者在籍</span>の当院がサポートします</p>
+    <h1 class="fv-catch">その<span class="em">むちうち</span>・<br>首や腰の痛み、<br>我慢しないでください</h1>
+    <p class="fv-lead" style="margin-top:8px;">「レントゲンでは異常なし」でも、つらい症状には理由があります。</p>
+
+    <div class="fv-main">
+      <div class="fv-photo"><img src="images/hero.jpg" alt="たいよう鍼灸整骨院の施術風景"></div>
+      <div class="fv-points">
+        <div class="fv-point">
+          <span class="zero">0円</span>
+          <span><small>自賠責保険適用で</small>窓口負担<small>※過失割合等により異なる場合があります</small></span>
+        </div>
+        <div class="fv-point">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V7l8-4z"/><path d="M8.5 12l2.5 2.5 4.5-4.5"/></svg>
+          <span>保険・慰謝料の<br>手続きサポートで安心</span>
+        </div>
+        <div class="fv-point">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          <span><span class="marker">夜21時まで受付！</span></span>
+        </div>
+        <div class="fv-point">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-6.8-6.5-11a6.5 6.5 0 0 1 13 0c0 4.2-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          <span>土曜も営業中！<br>越谷・川口<span style="color:var(--orange);">3店舗</span></span>
+        </div>
+      </div>
     </div>
   </div>
+
+  <div class="fv-gold">
+    <span class="gold-line">平日21時まで受付</span>
+    <span class="gold-line">即日対応OK！</span>
+    <p class="fv-note">受付時間：月〜金 10:00〜21:00 ／ 土 9:00〜18:00（日曜・祝日休み）<br>※窓口負担0円は自賠責保険が適用された場合です。過失割合などにより異なるケースがあります。</p>
+  </div>
 </div>
-<p class="hero-note">※窓口負担0円は自賠責保険が適用された場合です。過失割合などにより異なるケースがあります。</p>
 
 <!-- ===== CTA① LINE ===== -->
+<a class="cta-band" href="#line-cta">＼ LINE・お電話でのご予約・ご相談 ／</a>
 <div class="cta" id="line-cta">
   <div class="wrap">
     <p class="cta-title">まずは<span class="em">LINEで無料相談</span>ください</p>
@@ -654,18 +731,17 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 </div>
 
 <!-- ===== 2. 悩み共感 ===== -->
-<section class="nayami">
+<section class="nayami band-sec">
+  <h2 class="band-title">事故のあと、こんなことで<br>お困りではありませんか？</h2>
   <div class="wrap">
-    <p class="sec-label">CHECK</p>
-    <h2 class="sec-title">事故のあと、<br>こんなことで<span class="em">お困りではありませんか？</span></h2>
     <div class="photo"><img src="images/nayami.jpg" alt="事故後の首の痛みに悩む男性" loading="lazy"></div>
     <div class="nayami-list">
-      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>事故直後は平気だったのに、数日たって首や腰が痛み出した</div>
-      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>病院で「レントゲンは異常なし」と言われたが、痛み・だるさが続いている</div>
-      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>湿布と痛み止めだけで、このままでいいのか不安</div>
-      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>保険会社とのやりとりや手続きが分からず不安</div>
-      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>仕事が忙しく、夜や仕事帰りに通えるところを探している</div>
-      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>病院に通いながら整骨院にも通えるのか知りたい</div>
+      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13.5l4.5 4.5C11 14 15 8 20.5 4.5"/></svg></span>事故直後は平気だったのに、数日たって首や腰が痛み出した</div>
+      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13.5l4.5 4.5C11 14 15 8 20.5 4.5"/></svg></span>病院で「レントゲンは異常なし」と言われたが、痛み・だるさが続いている</div>
+      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13.5l4.5 4.5C11 14 15 8 20.5 4.5"/></svg></span>湿布と痛み止めだけで、このままでいいのか不安</div>
+      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13.5l4.5 4.5C11 14 15 8 20.5 4.5"/></svg></span>保険会社とのやりとりや手続きが分からず不安</div>
+      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13.5l4.5 4.5C11 14 15 8 20.5 4.5"/></svg></span>仕事が忙しく、夜や仕事帰りに通えるところを探している</div>
+      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13.5l4.5 4.5C11 14 15 8 20.5 4.5"/></svg></span>病院に通いながら整骨院にも通えるのか知りたい</div>
     </div>
     <div class="nayami-close">
       ひとつでも当てはまる方は、<br><span class="em">今すぐご相談ください。</span><br>
@@ -677,55 +753,84 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 <!-- ===== 3. 事故後すぐ相談すべき3つの理由 ===== -->
 <section>
   <div class="wrap">
-    <p class="sec-label">WHY</p>
-    <h2 class="sec-title">事故後<span class="em">「すぐに」</span>相談すべき<br>3つの理由</h2>
-    <div class="photo"><img src="images/accident.jpg" alt="交通事故で破損した車両" loading="lazy"></div>
+    <h2 class="t-title"><span class="small">事故後「すぐに」相談すべき</span><span class="big">3つの理由</span></h2>
     <div class="reason-cards">
+
       <div class="reason-card">
-        <span class="reason-num">1</span>
+        <div class="reason-tag">
+          <span class="tag">事故後すぐ相談すべき理由</span>
+          <span class="num">1</span>
+        </div>
         <h3>痛みを長引かせないため</h3>
+        <div class="reason-visual svgbox">
+          <svg viewBox="0 0 150 120" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="66" cy="38" r="18" fill="none" stroke="#f57c1f" stroke-width="3"/>
+            <path d="M66 56c-16 4-22 16-22 34" fill="none" stroke="#f57c1f" stroke-width="3" stroke-linecap="round"/>
+            <path d="M66 56c10 2 16 8 18 16" fill="none" stroke="#f57c1f" stroke-width="3" stroke-linecap="round"/>
+            <path d="M100 30l-7 12h10l-8 14" fill="none" stroke="#f57c1f" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M118 44l-5 8h7l-6 10" fill="none" stroke="#f5c99a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
         <p>むちうちの症状は、事故から<b>数日〜数週間たってから</b>現れることが少なくありません。「大したことない」と放置すると、首・肩・腰の痛みやだるさが長引きやすくなります。後遺症を残さないためにも、早期のケアが大切です。</p>
       </div>
+
       <div class="reason-card">
-        <span class="reason-num">2</span>
-        <h3>事故とケガの因果関係を証明するため</h3>
+        <div class="reason-tag">
+          <span class="tag">事故後すぐ相談すべき理由</span>
+          <span class="num">2</span>
+        </div>
+        <h3>事故とケガの因果関係を<br>証明するため</h3>
+        <div class="reason-visual"><img src="images/accident.jpg" alt="交通事故で破損した車両" loading="lazy"></div>
         <p>事故から日数が空いて受診すると、<b>「そのケガは本当に事故が原因なのか」</b>を証明しにくくなります。因果関係が認められないと、自賠責保険での補償（治療費・慰謝料など）が受けにくくなる恐れがあります。</p>
       </div>
+
       <div class="reason-card">
-        <span class="reason-num">3</span>
+        <div class="reason-tag">
+          <span class="tag">事故後すぐ相談すべき理由</span>
+          <span class="num">3</span>
+        </div>
         <h3>適切な補償を受けるため</h3>
+        <div class="reason-visual svgbox">
+          <svg viewBox="0 0 150 120" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="22" width="60" height="76" rx="6" fill="none" stroke="#f57c1f" stroke-width="3"/>
+            <path d="M42 40h36M42 52h36M42 64h24" stroke="#f5c99a" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="104" cy="76" r="24" fill="#fff" stroke="#f57c1f" stroke-width="3"/>
+            <path d="M97 68l7 9 7-9M97 82h14M97 88h14M104 77v16" stroke="#f57c1f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
         <p>治療費・交通費・慰謝料・休業損害など、交通事故の被害者が受けられる補償は多岐にわたります。<b>知らないまま我慢して損をしてしまう方が非常に多い</b>のが実情です。正しい知識を持つことが、ご自身を守ることにつながります。</p>
       </div>
+
     </div>
     <p class="reason-close">迷ったら、まず相談。<br><span class="em">保険会社への連絡前でも大丈夫です。</span></p>
   </div>
 </section>
 
-<!-- ===== 4. 慰謝料計算シミュレーター ===== -->
+<!-- ===== 4. 慰謝料計算 ===== -->
 <section class="sim" id="simulator">
   <div class="wrap">
-    <p class="sec-label">SIMULATOR</p>
-    <h2 class="sec-title">慰謝料かんたん<br>計算シミュレーター</h2>
+    <h2 class="t-title"><span class="small">交通事故治療でもらえる</span><span class="big">慰謝料の計算</span></h2>
     <p class="sim-intro">自賠責保険の基準では、通院に対する慰謝料の目安を計算できます。<br>3つの項目を入れるだけで、あなたのケースの目安が分かります。</p>
 
     <div class="sim-card">
       <div class="sim-card-head">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#1866c0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="3.5" rx="1" fill="#eaf3fc" stroke="none"/><path d="M8.5 12.5h.01M12 12.5h.01M15.5 12.5h.01M8.5 15.7h.01M12 15.7h.01M15.5 15.7h.01M8.5 18.9h.01M12 18.9h.01M15.5 18.9h.01" stroke-width="2.4"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="3.5" rx="1" fill="#fdeedd" stroke="none"/><path d="M8.5 12.5h.01M12 12.5h.01M15.5 12.5h.01M8.5 15.7h.01M12 15.7h.01M15.5 15.7h.01M8.5 18.9h.01M12 18.9h.01M15.5 18.9h.01" stroke-width="2.4"/></svg>
         通院慰謝料の目安を計算
       </div>
 
       <div class="sim-field">
-        <label for="sim-start"><span class="fn">1</span>治療を開始した日</label>
+        <label for="sim-start">通院開始日</label>
         <input type="date" id="sim-start">
       </div>
       <div class="sim-field">
-        <label for="sim-end"><span class="fn">2</span>治療を終了した日（予定でもOK）</label>
+        <label for="sim-end">通院終了日</label>
         <input type="date" id="sim-end">
+        <p class="hint">※終了予定の日でもOKです</p>
       </div>
       <div class="sim-field">
-        <label for="sim-days"><span class="fn">3</span>実際に通院した日数</label>
+        <label for="sim-days">治療に通った回数</label>
         <input type="number" id="sim-days" min="1" inputmode="numeric" placeholder="例：15">
-        <p class="hint">病院・整骨院に実際に通った日数の合計を入れてください</p>
+        <p class="hint">※病院、整骨院どちらもカウントしてください（実際に通った日数の合計）</p>
       </div>
 
       <button type="button" class="sim-btn" id="sim-calc">
@@ -754,8 +859,7 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 <!-- ===== 5. 選ばれる4つの安心 ===== -->
 <section>
   <div class="wrap">
-    <p class="sec-label">REASON</p>
-    <h2 class="sec-title">たいよう鍼灸整骨院<br><span class="em">4つの安心</span></h2>
+    <h2 class="t-title"><span class="small">たいよう鍼灸整骨院</span><span class="big">4つの安心</span></h2>
     <div class="anshin-list">
 
       <div class="anshin">
@@ -766,7 +870,7 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 
       <div class="anshin">
         <div class="anshin-head"><span class="anshin-num">02</span><h3>自賠責保険適用で窓口負担0円・手続きもサポート</h3></div>
-        <div class="anshin-body">交通事故によるケガの施術は自賠責保険が適用され、<b>窓口でのお支払いは原則0円</b>。施術費は当院から保険会社へ直接請求するため、立て替えも不要です。保険会社への連絡の仕方など、面倒な手続きの不安にも寄り添ってサポートします。<br><span style="font-size:11.5px;color:#7d8a99;">※過失割合などにより異なるケースがあります。</span></div>
+        <div class="anshin-body">交通事故によるケガの施術は自賠責保険が適用され、<b>窓口でのお支払いは原則0円</b>。施術費は当院から保険会社へ直接請求するため、立て替えも不要です。保険会社への連絡の仕方など、面倒な手続きの不安にも寄り添ってサポートします。<br><span style="font-size:11.5px;color:#9a8f7f;">※過失割合などにより異なるケースがあります。</span></div>
       </div>
 
       <div class="anshin">
@@ -786,32 +890,31 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 </section>
 
 <!-- ===== 6. 補償の知識 ===== -->
-<section class="hosho">
+<section class="hosho band-sec">
+  <h2 class="band-title">知っておきたい<br>交通事故の補償</h2>
   <div class="wrap">
-    <p class="sec-label">KNOWLEDGE</p>
-    <h2 class="sec-title">知っておきたい<br><span class="marker">交通事故の補償</span></h2>
     <div class="hosho-grid">
 
       <div class="hosho-card">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1866c0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V7l8-4z"/><path d="M12 9v6M9 12h6"/></svg></div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V7l8-4z"/><path d="M12 9v6M9 12h6"/></svg></div>
         <h3>治療費</h3>
         <p>病院・整骨院での治療費・施術費は<b>自賠責保険から支払われます</b>。窓口負担は原則0円で、立て替えの必要もありません。</p>
       </div>
 
       <div class="hosho-card">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1866c0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16V8a2 2 0 0 1 2-2h9l5 5v5a1 1 0 0 1-1 1h-1"/><circle cx="8" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M10 17h5M4 16a1 1 0 0 0 1 1h1"/></svg></div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16V8a2 2 0 0 1 2-2h9l5 5v5a1 1 0 0 1-1 1h-1"/><circle cx="8" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M10 17h5M4 16a1 1 0 0 0 1 1h1"/></svg></div>
         <h3>交通費</h3>
         <p>通院にかかった<b>交通費も補償の対象</b>です。公共交通機関の運賃のほか、自家用車のガソリン代なども対象になります。</p>
       </div>
 
       <div class="hosho-card">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1866c0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5M15.5 14.5c0 1.7-1.6 2.7-3.5 2.7s-3.5-1-3.5-2.7"/></svg></div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5M15.5 14.5c0 1.7-1.6 2.7-3.5 2.7s-3.5-1-3.5-2.7"/></svg></div>
         <h3>慰謝料</h3>
         <p>通院に対する精神的苦痛への補償です。自賠責基準では<b>1日4,300円 × 対象日数</b>（治療期間の総日数と実通院日数×2の少ないほう）が目安です。</p>
       </div>
 
       <div class="hosho-card">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1866c0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div>
         <h3>休業損害</h3>
         <p>ケガの治療のために<b>仕事を休んだ分の収入も補償</b>されます。会社員だけでなく、パート・自営業・主婦（主夫）の方も対象です。</p>
       </div>
@@ -824,8 +927,7 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 <!-- ===== 7. 流れ5ステップ ===== -->
 <section>
   <div class="wrap">
-    <p class="sec-label">FLOW</p>
-    <h2 class="sec-title">事故発生から<br>施術開始までの流れ</h2>
+    <h2 class="t-title"><span class="small">事故発生から</span><span class="big">施術開始までの流れ</span></h2>
     <div class="flow-list">
       <div class="flow-step">
         <div class="flow-num">1</div>
@@ -868,7 +970,8 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 </section>
 
 <!-- ===== 8. 中間CTA ===== -->
-<div class="cta cta-strong">
+<a class="cta-band" href="#line-cta">＼ LINE・お電話でのご予約・ご相談 ／</a>
+<div class="cta">
   <div class="wrap">
     <p class="cta-title">痛みも、手続きの不安も、<br>まとめて<span class="em">ご相談ください</span></p>
     <p class="cta-note">相談だけでも大歓迎。無理な通院のおすすめはしません。</p>
@@ -900,8 +1003,7 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 <!-- ===== 9. Q&A ===== -->
 <section>
   <div class="wrap">
-    <p class="sec-label">Q&A</p>
-    <h2 class="sec-title">よくあるご質問</h2>
+    <h2 class="t-title"><span class="small">交通事故治療の</span><span class="big">よくあるご質問</span></h2>
 
     <details class="qa-item" open>
       <summary><span class="qa-q">Q</span>本当に窓口負担0円で通えますか？<span class="qa-toggle">＋</span></summary>
@@ -955,10 +1057,9 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 </div>
 
 <!-- ===== 10. 3店舗のご案内 ===== -->
-<section class="stores" id="stores">
+<section class="stores band-sec" id="stores">
+  <h2 class="band-title">越谷・川口<br>3店舗のご案内</h2>
   <div class="wrap">
-    <p class="sec-label">ACCESS</p>
-    <h2 class="sec-title">3店舗のご案内</h2>
 
     <div class="hours-box">
       全店共通 受付時間<br>
@@ -968,11 +1069,31 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 
     <!-- 越谷院 -->
     <div class="store-card">
-      <div class="store-head">
-        <span class="sn">01</span>
-        <h3>たいよう整骨院 越谷院<small>越谷駅 東口 徒歩2分</small></h3>
-      </div>
       <div class="store-body">
+        <p class="store-card-title">店舗情報</p>
+        <p class="store-name">たいよう整骨院 越谷院<small>越谷駅 東口 徒歩2分</small></p>
+        <div class="store-info">
+          <div class="si-item">
+            <p class="si-label">院名</p>
+            <p class="si-value">たいよう整骨院 越谷院</p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">住所</p>
+            <p class="si-value">〒343-0816<br>埼玉県越谷市弥生町1-12 T&amp;S 1F</p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">アクセス</p>
+            <p class="si-value">東武スカイツリーライン「越谷駅」東口 徒歩2分</p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">駐車場</p>
+            <p class="si-value"><span class="pk">提携コインパーキングあり（受付でチケットをお渡しします）</span></p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">受付時間</p>
+            <p class="si-value">月〜金 10:00〜21:00 ／ 土 9:00〜18:00<br>日曜・祝日 休み</p>
+          </div>
+        </div>
         <a class="store-tel" href="tel:0489406665">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
           <span><span class="num">048-940-6665</span><small>タップで電話がかかります</small></span>
@@ -981,12 +1102,6 @@ details[open] .qa-toggle{transform:rotate(45deg);}
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
           越谷院 LINEで相談
         </a>
-        <table class="store-table">
-          <tr><th>住所</th><td>〒343-0816<br>埼玉県越谷市弥生町1-12 T&amp;S 1F</td></tr>
-          <tr><th>アクセス</th><td>東武スカイツリーライン「越谷駅」東口 徒歩2分</td></tr>
-          <tr><th>駐車場</th><td class="pk">提携コインパーキングあり（受付でチケットをお渡しします）</td></tr>
-          <tr><th>受付時間</th><td>月〜金 10:00〜21:00 ／ 土 9:00〜18:00<br>日曜・祝日 休み</td></tr>
-        </table>
         <div class="store-map">
           <iframe src="https://maps.google.com/maps?q=%E5%9F%BC%E7%8E%89%E7%9C%8C%E8%B6%8A%E8%B0%B7%E5%B8%82%E5%BC%A5%E7%94%9F%E7%94%BA1-12&z=17&output=embed" loading="lazy" title="たいよう整骨院 越谷院の地図" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -995,11 +1110,31 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 
     <!-- 川口朝日院 -->
     <div class="store-card">
-      <div class="store-head">
-        <span class="sn">02</span>
-        <h3>たいよう整骨院 川口朝日院<small>南鳩ヶ谷駅 徒歩10分・駐車場あり</small></h3>
-      </div>
       <div class="store-body">
+        <p class="store-card-title">店舗情報</p>
+        <p class="store-name">たいよう整骨院 川口朝日院<small>南鳩ヶ谷駅 徒歩10分・駐車場あり</small></p>
+        <div class="store-info">
+          <div class="si-item">
+            <p class="si-label">院名</p>
+            <p class="si-value">たいよう整骨院 川口朝日院</p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">住所</p>
+            <p class="si-value">〒332-0001<br>埼玉県川口市朝日4-19-12</p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">アクセス</p>
+            <p class="si-value">「南鳩ヶ谷駅」徒歩10分</p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">駐車場</p>
+            <p class="si-value"><span class="pk">駐車場あり（お車での通院に便利です）</span></p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">受付時間</p>
+            <p class="si-value">月〜金 10:00〜21:00 ／ 土 9:00〜18:00<br>日曜・祝日 休み</p>
+          </div>
+        </div>
         <a class="store-tel" href="tel:0482294206">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
           <span><span class="num">048-229-4206</span><small>タップで電話がかかります</small></span>
@@ -1008,12 +1143,6 @@ details[open] .qa-toggle{transform:rotate(45deg);}
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
           川口朝日院 LINEで相談
         </a>
-        <table class="store-table">
-          <tr><th>住所</th><td>〒332-0001<br>埼玉県川口市朝日4-19-12</td></tr>
-          <tr><th>アクセス</th><td>「南鳩ヶ谷駅」徒歩10分</td></tr>
-          <tr><th>駐車場</th><td class="pk">駐車場あり（お車での通院に便利です）</td></tr>
-          <tr><th>受付時間</th><td>月〜金 10:00〜21:00 ／ 土 9:00〜18:00<br>日曜・祝日 休み</td></tr>
-        </table>
         <div class="store-map">
           <iframe src="https://maps.google.com/maps?q=%E5%9F%BC%E7%8E%89%E7%9C%8C%E5%B7%9D%E5%8F%A3%E5%B8%82%E6%9C%9D%E6%97%A54-19-12&z=17&output=embed" loading="lazy" title="たいよう整骨院 川口朝日院の地図" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -1022,11 +1151,27 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 
     <!-- 川口鳩ヶ谷院 -->
     <div class="store-card">
-      <div class="store-head">
-        <span class="sn">03</span>
-        <h3>たいよう整骨院・鍼灸院 川口鳩ヶ谷院<small>駐車場4台あり・お車で通いやすい</small></h3>
-      </div>
       <div class="store-body">
+        <p class="store-card-title">店舗情報</p>
+        <p class="store-name">たいよう整骨院・鍼灸院 川口鳩ヶ谷院<small>駐車場4台あり・お車で通いやすい</small></p>
+        <div class="store-info">
+          <div class="si-item">
+            <p class="si-label">院名</p>
+            <p class="si-value">たいよう整骨院・鍼灸院 川口鳩ヶ谷院</p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">住所</p>
+            <p class="si-value">〒334-0005<br>埼玉県川口市里1271</p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">駐車場</p>
+            <p class="si-value"><span class="pk">駐車場4台あり（お車での通院に便利です）</span></p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">受付時間</p>
+            <p class="si-value">月〜金 10:00〜21:00 ／ 土 9:00〜18:00<br>日曜・祝日 休み</p>
+          </div>
+        </div>
         <a class="store-tel" href="tel:0484524549">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
           <span><span class="num">048-452-4549</span><small>タップで電話がかかります</small></span>
@@ -1035,11 +1180,6 @@ details[open] .qa-toggle{transform:rotate(45deg);}
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
           川口鳩ヶ谷院 LINEで相談
         </a>
-        <table class="store-table">
-          <tr><th>住所</th><td>〒334-0005<br>埼玉県川口市里1271</td></tr>
-          <tr><th>駐車場</th><td class="pk">駐車場4台あり（お車での通院に便利です）</td></tr>
-          <tr><th>受付時間</th><td>月〜金 10:00〜21:00 ／ 土 9:00〜18:00<br>日曜・祝日 休み</td></tr>
-        </table>
         <div class="store-map">
           <iframe src="https://maps.google.com/maps?q=%E5%9F%BC%E7%8E%89%E7%9C%8C%E5%B7%9D%E5%8F%A3%E5%B8%82%E9%87%8C1271&z=17&output=embed" loading="lazy" title="たいよう整骨院・鍼灸院 川口鳩ヶ谷院の地図" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -1050,9 +1190,10 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 </section>
 
 <!-- ===== 11. 最終CTA ===== -->
-<div class="cta cta-strong">
+<a class="cta-band" href="#line-cta">＼ LINE・お電話でのご予約・ご相談 ／</a>
+<div class="cta">
   <div class="wrap">
-    <p class="cta-title">交通事故のお悩み、<br>ひとりで抱え込まないでください</p>
+    <p class="cta-title">交通事故のお悩み、<br>ひとりで<span class="em">抱え込まないでください</span></p>
     <p class="cta-note">相談だけでも大歓迎です。あなたの通いやすい店舗でお待ちしています。</p>
     <div class="cta-btns">
       <a class="btn btn-line" href="https://line.me/R/ti/p/%40828bcxxh" target="_blank" rel="noopener">
@@ -1089,15 +1230,15 @@ details[open] .qa-toggle{transform:rotate(45deg);}
   </div>
 </footer>
 
-<!-- ===== 追従フッターCTA ===== -->
+<!-- ===== 固定フッターバー ===== -->
 <div class="fixed-cta">
-  <a class="btn btn-line" href="#line-cta">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
-    <span class="btn-inner">LINEで相談<small>24時間受付・3店舗</small></span>
-  </a>
-  <a class="btn btn-tel" href="#stores">
+  <a href="#stores">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
-    <span class="btn-inner">店舗・電話一覧<small>地図・駐車場情報も</small></span>
+    お電話でのご予約・ご相談
+  </a>
+  <a href="#line-cta">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
+    LINEで相談
   </a>
 </div>
 
@@ -1130,9 +1271,9 @@ details[open] .qa-toggle{transform:rotate(45deg);}
     var daysVal  = daysEl.value;
 
     var missing = [];
-    if(!startVal) missing.push('「1. 治療を開始した日」');
-    if(!endVal)   missing.push('「2. 治療を終了した日」');
-    if(!daysVal)  missing.push('「3. 実際に通院した日数」');
+    if(!startVal) missing.push('「通院開始日」');
+    if(!endVal)   missing.push('「通院終了日」');
+    if(!daysVal)  missing.push('「治療に通った回数」');
     if(missing.length){
       showError(missing.join('と') + 'を入力してください。');
       return;
@@ -1147,11 +1288,11 @@ details[open] .qa-toggle{transform:rotate(45deg);}
       return;
     }
     if(end < start){
-      showError('治療終了日が開始日より前になっています。日付をご確認ください。');
+      showError('通院終了日が開始日より前になっています。日付をご確認ください。');
       return;
     }
     if(isNaN(visits) || visits < 1){
-      showError('通院日数は1日以上の数字で入力してください。');
+      showError('治療に通った回数は1日以上の数字で入力してください。');
       return;
     }
 
