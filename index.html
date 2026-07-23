@@ -126,7 +126,8 @@ section{padding:52px 0 56px;scroll-margin-top:64px;}
   background:var(--cream);
   align-self:stretch;
 }
-.fv-photo img{width:100%;height:100%;object-fit:cover;object-position:center 25%;}
+.fv-photo{min-height:230px;}
+.fv-photo img{width:100%;height:100%;object-fit:cover;object-position:center 22%;}
 .fv-points{display:flex;flex-direction:column;gap:9px;}
 .fv-point{
   background:#fff;
@@ -346,74 +347,71 @@ section{padding:52px 0 56px;scroll-margin-top:64px;}
   border-bottom:3px dotted var(--dot);
 }
 .sim-card-head svg{width:26px;height:26px;flex-shrink:0;}
-.sim-field{margin-bottom:16px;}
-.sim-field label{
-  display:block;
-  font-weight:900;font-size:15px;color:var(--text);
-  margin-bottom:6px;
+.sim-week-label{
+  display:block;text-align:center;
+  font-weight:900;font-size:15.5px;color:var(--text);
+  margin-bottom:10px;
 }
-.sim-field input{
-  width:100%;
-  font-family:inherit;font-size:17px;font-weight:700;color:var(--text);
-  padding:13px 14px;
-  border:2px solid #f0dfc6;border-radius:14px;
+.sim-week{
+  display:grid;grid-template-columns:repeat(7,1fr);gap:6px;
+  margin-bottom:20px;
+}
+.sim-week button{
+  font-family:inherit;font-weight:900;
+  font-size:clamp(13px,3.6vw,16px);line-height:1.25;
+  color:var(--orange-dark);
   background:var(--cream);
-  -webkit-appearance:none;appearance:none;
+  border:2px solid #f0dfc6;border-radius:12px;
+  padding:10px 0 8px;cursor:pointer;
+  transition:transform .12s ease;
+  -webkit-tap-highlight-color:transparent;
 }
-.sim-field input:focus{outline:none;border-color:var(--orange);background:#fff;}
-.sim-field .hint{
-  font-size:11.5px;color:#9a8f7f;margin-top:4px;
+.sim-week button small{
+  display:block;font-size:10px;font-weight:700;
   font-family:'Noto Sans JP',sans-serif;
 }
-.sim-btn{
-  width:100%;
-  font-family:inherit;font-size:19px;font-weight:900;letter-spacing:.05em;
+.sim-week button:active{transform:scale(.94);}
+.sim-week button.on{
   color:#fff;background:var(--orange);
-  border:none;border-radius:16px;
-  padding:16px;cursor:pointer;
-  box-shadow:0 4px 0 var(--orange-deep),0 8px 16px rgba(245,124,31,.3);
-  transition:transform .15s ease;
-  display:flex;align-items:center;justify-content:center;gap:10px;
+  border-color:var(--orange);
+  box-shadow:0 3px 0 var(--orange-deep),0 5px 12px rgba(245,124,31,.3);
 }
-.sim-btn:active{transform:scale(.97);}
-.sim-btn svg{width:22px;height:22px;}
-.sim-error{
-  display:none;
-  margin-top:14px;
-  background:#fdf0ef;border:1.5px solid #f0c3bf;border-radius:12px;
-  color:#b3271c;font-size:13.5px;font-weight:700;
-  padding:12px 14px;line-height:1.7;
-  font-family:'Noto Sans JP',sans-serif;
+.sim-table-wrap{overflow-x:auto;}
+.sim-table{
+  width:100%;border-collapse:collapse;
+  animation:simpop .3s ease;
 }
-.sim-error.show{display:block;}
-.sim-result{
-  display:none;
-  margin-top:18px;
-  background:var(--cream);
-  border:3px solid var(--orange);
-  border-radius:18px;
-  padding:18px 16px 16px;
-  text-align:center;
+.sim-table th,.sim-table td{
+  border-bottom:1px dashed #e9d7bc;
+  padding:11px 4px;text-align:center;line-height:1.5;
 }
-.sim-result.show{display:block;animation:simpop .35s ease;}
+.sim-table thead th{
+  background:var(--orange);color:#fff;
+  font-size:12px;font-weight:900;letter-spacing:.02em;
+  padding:9px 4px;border-bottom:none;
+}
+.sim-table thead th:first-child{border-radius:10px 0 0 10px;}
+.sim-table thead th:last-child{border-radius:0 10px 10px 0;}
+.sim-table tbody tr:last-child th,.sim-table tbody tr:last-child td{border-bottom:none;}
+.sim-table tbody th{
+  font-size:12.5px;font-weight:900;color:var(--text);
+  text-align:left;padding-left:2px;white-space:nowrap;
+}
+.sim-table tbody th small{font-weight:700;color:#9a8f7f;font-size:10px;}
+.sim-table .cnt{
+  font-size:13px;font-weight:700;color:var(--text-soft);
+  font-family:'Noto Sans JP',sans-serif;white-space:nowrap;
+}
+.sim-table .yen{
+  font-weight:900;color:var(--orange);
+  font-size:clamp(17px,4.9vw,22px);line-height:1.2;
+  white-space:nowrap;
+}
+.sim-table .yen small{font-size:.6em;}
 @keyframes simpop{
-  0%{transform:scale(.92);opacity:0;}
+  0%{transform:scale(.97);opacity:0;}
   100%{transform:scale(1);opacity:1;}
 }
-.sim-result .rl{font-size:13.5px;font-weight:700;color:var(--text);}
-.sim-result .rn{
-  font-size:clamp(38px,10vw,50px);font-weight:900;color:var(--orange);
-  line-height:1.2;letter-spacing:.01em;
-}
-.sim-result .rn small{font-size:.45em;}
-.sim-result .rd{
-  margin-top:10px;
-  background:#fff;border:1px dashed #e2c9a8;border-radius:12px;
-  padding:10px 12px;
-  font-size:12.5px;color:#5c554a;text-align:left;line-height:1.8;
-  font-family:'Noto Sans JP',sans-serif;
-}
-.sim-result .rd b{color:var(--orange-dark);}
 .sim-formula{
   margin:24px auto 0;max-width:520px;
   background:#fff;
@@ -587,6 +585,21 @@ details[open] .qa-toggle{transform:rotate(45deg);}
   font-size:14px;font-family:'Noto Sans JP',sans-serif;line-height:1.8;
 }
 .si-value .pk{color:var(--orange-dark);font-weight:700;}
+.store-kids{
+  display:flex;align-items:center;gap:12px;
+  background:var(--cream);border:1.5px dashed var(--dot);
+  border-radius:14px;padding:10px 12px;
+  margin:0 0 16px;
+}
+.store-kids img{
+  width:96px;height:72px;object-fit:cover;
+  border-radius:10px;flex-shrink:0;
+}
+.store-kids p{
+  font-size:12.5px;line-height:1.7;
+  font-family:'Noto Sans JP',sans-serif;color:var(--text);
+}
+.store-kids p b{color:var(--orange-dark);font-size:13px;}
 .store-tel{
   display:flex;align-items:center;justify-content:center;gap:10px;
   background:var(--orange);
@@ -670,7 +683,7 @@ details[open] .qa-toggle{transform:rotate(45deg);}
     <p class="fv-lead" style="margin-top:8px;">「レントゲンでは異常なし」でも、つらい症状には理由があります。</p>
 
     <div class="fv-main">
-      <div class="fv-photo"><img src="images/hero.jpg" alt="たいよう鍼灸整骨院の施術風景"></div>
+      <div class="fv-photo"><img src="images/staff.jpg" alt="たいよう鍼灸整骨院のスタッフ"></div>
       <div class="fv-points">
         <div class="fv-point">
           <span class="zero">0円</span>
@@ -734,7 +747,7 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 <section class="nayami band-sec">
   <h2 class="band-title">事故のあと、こんなことで<br>お困りではありませんか？</h2>
   <div class="wrap">
-    <div class="photo"><img src="images/nayami.jpg" alt="事故後の首の痛みに悩む男性" loading="lazy"></div>
+    <div class="photo"><img src="images/shijutsu-neck.jpg" alt="むちうちなど首まわりの施術の様子" loading="lazy"></div>
     <div class="nayami-list">
       <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13.5l4.5 4.5C11 14 15 8 20.5 4.5"/></svg></span>事故直後は平気だったのに、数日たって首や腰が痛み出した</div>
       <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13.5l4.5 4.5C11 14 15 8 20.5 4.5"/></svg></span>病院で「レントゲンは異常なし」と言われたが、痛み・だるさが続いている</div>
@@ -810,7 +823,7 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 <section class="sim" id="simulator">
   <div class="wrap">
     <h2 class="t-title"><span class="small">交通事故治療でもらえる</span><span class="big">慰謝料の計算</span></h2>
-    <p class="sim-intro">自賠責保険の基準では、通院に対する慰謝料の目安を計算できます。<br>3つの項目を入れるだけで、あなたのケースの目安が分かります。</p>
+    <p class="sim-intro">通院の終了日が決まっていなくても大丈夫。<br>「週に通える回数」を選ぶだけで、期間ごとの慰謝料の目安が一覧で分かります。</p>
 
     <div class="sim-card">
       <div class="sim-card-head">
@@ -818,39 +831,30 @@ details[open] .qa-toggle{transform:rotate(45deg);}
         通院慰謝料の目安を計算
       </div>
 
-      <div class="sim-field">
-        <label for="sim-start">通院開始日</label>
-        <input type="date" id="sim-start">
-      </div>
-      <div class="sim-field">
-        <label for="sim-end">通院終了日</label>
-        <input type="date" id="sim-end">
-        <p class="hint">※終了予定の日でもOKです</p>
-      </div>
-      <div class="sim-field">
-        <label for="sim-days">治療に通った回数</label>
-        <input type="number" id="sim-days" min="1" inputmode="numeric" placeholder="例：15">
-        <p class="hint">※病院、整骨院どちらもカウントしてください（実際に通った日数の合計）</p>
+      <span class="sim-week-label" id="sim-week-label">週に通える回数を選んでください</span>
+      <div class="sim-week" id="sim-week" role="group" aria-labelledby="sim-week-label">
+        <button type="button" data-week="1">週1<small>回</small></button>
+        <button type="button" data-week="2" class="on">週2<small>回</small></button>
+        <button type="button" data-week="3">週3<small>回</small></button>
+        <button type="button" data-week="4">週4<small>回</small></button>
+        <button type="button" data-week="5">週5<small>回</small></button>
+        <button type="button" data-week="6">週6<small>回</small></button>
+        <button type="button" data-week="7">週7<small>回</small></button>
       </div>
 
-      <button type="button" class="sim-btn" id="sim-calc">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m0 6v4a2 2 0 0 0 2 2h4m6-18h4a2 2 0 0 1 2 2v4m0 6v4a2 2 0 0 1-2 2h-4"/><path d="M8 12h8M12 8v8"/></svg>
-        計算する
-      </button>
-
-      <div class="sim-error" id="sim-error" role="alert"></div>
-
-      <div class="sim-result" id="sim-result" aria-live="polite">
-        <p class="rl">あなたの通院慰謝料の目安（自賠責基準）</p>
-        <p class="rn"><span id="sim-amount">0</span><small> 円</small></p>
-        <div class="rd" id="sim-detail"></div>
+      <div class="sim-table-wrap" aria-live="polite">
+        <table class="sim-table" id="sim-table">
+          <thead>
+            <tr><th>通院期間</th><th>想定通院回数</th><th>慰謝料の目安</th></tr>
+          </thead>
+          <tbody id="sim-tbody"></tbody>
+        </table>
       </div>
     </div>
 
     <div class="sim-formula">
       <b>【計算のしくみ（自賠責基準）】</b><br>
-      対象日数 ＝「治療期間の総日数」と「実通院日数×2」の<b>少ないほう</b><br>
-      慰謝料の目安 ＝ 対象日数 × <b>4,300円</b>
+      自賠責保険の基準では、慰謝料は<b>【1日4,300円 × 対象日数】</b>で計算されます。<br>（対象日数＝「治療期間の総日数」と「実通院日数×2」の<b>少ないほう</b>）
     </div>
     <p class="sim-note">※自賠責保険の基準による目安です。実際の金額は過失割合や事案により異なります。弁護士基準（裁判基準）ではこれより高くなる場合があります。詳しくは店舗でお気軽にご相談ください。</p>
   </div>
@@ -863,7 +867,7 @@ details[open] .qa-toggle{transform:rotate(45deg);}
     <div class="anshin-list">
 
       <div class="anshin">
-        <div class="anshin-photo"><img src="images/shijutsu1.jpg" alt="国家資格者による丁寧な手技施術" loading="lazy"></div>
+        <div class="anshin-photo"><img src="images/shijutsu-back.jpg" alt="国家資格者による丁寧な手技施術" loading="lazy"></div>
         <div class="anshin-head"><span class="anshin-num">01</span><h3>国家資格者（柔道整復師・鍼灸師）が施術</h3></div>
         <div class="anshin-body">施術を担当するのは、<b>柔道整復師・鍼灸師の国家資格</b>を持つスタッフです。事故によるお身体の状態を丁寧に確認しながら、首・肩・腰など症状に合わせて、お一人おひとりに合った施術を行います。「強い刺激が苦手」という方もご安心ください。</div>
       </div>
@@ -876,11 +880,12 @@ details[open] .qa-toggle{transform:rotate(45deg);}
       <div class="anshin">
         <div class="anshin-photo tall"><img src="images/xray.jpg" alt="頸椎のレントゲンイメージ" loading="lazy"></div>
         <div class="anshin-head"><span class="anshin-num">03</span><h3>病院との併院・転院OK</h3></div>
-        <div class="anshin-body">整形外科で検査・診断を受けながら、当院で施術を受ける<b>「併院」が可能</b>です。レントゲンで「異常なし」と言われた方も、筋肉や関節まわりの状態を確認しながらケアを行います。現在ほかの医療機関・整骨院に通っている方の転院も、ご自身の意思で選択できます。</div>
+        <div class="anshin-body">整形外科で検査・診断を受けながら、当院で施術を受ける<b>「併院」が可能</b>です。レントゲンで「異常なし」と言われた方も、筋肉や関節まわりの状態を確認しながら、手技や電気治療の機器を使ってケアを行います。現在ほかの医療機関・整骨院に通っている方の転院も、ご自身の意思で選択できます。</div>
+        <div class="anshin-photo"><img src="images/ems.jpg" alt="電気治療の機器を使った施術の様子" loading="lazy"></div>
       </div>
 
       <div class="anshin">
-        <div class="anshin-photo"><img src="images/shijutsu2.jpg" alt="症状に合わせた施術の様子" loading="lazy"></div>
+        <div class="anshin-photo"><img src="images/shijutsu-leg.jpg" alt="症状に合わせたストレッチ施術の様子" loading="lazy"></div>
         <div class="anshin-head"><span class="anshin-num">04</span><h3>夜21時まで＆土曜も受付・3店舗で通いやすい</h3></div>
         <div class="anshin-body">平日は<b>夜21時まで</b>、土曜も18時まで受付。お仕事帰りでも通いやすい環境です。越谷・川口朝日・川口鳩ヶ谷の<b>3店舗</b>から、ご自宅やお勤め先に近い店舗をお選びいただけます。駅近の店舗も、駐車場のある店舗もあります。</div>
       </div>
@@ -1050,9 +1055,9 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 <!-- ===== 回復メッセージ ===== -->
 <div class="kaifuku">
   <div class="wrap">
-    <div class="photo"><img src="images/kaifuku.jpg" alt="痛みを気にせず過ごす穏やかな日常のイメージ" loading="lazy"></div>
+    <div class="photo"><img src="images/harikyu.jpg" alt="国家資格者による鍼灸施術の様子" loading="lazy"></div>
     <p class="kaifuku-msg">大切なのは、痛みを我慢しないこと。<br><span class="em">事故前の毎日</span>に戻るために、<br>一緒に一歩ずつ進んでいきましょう。</p>
-    <p class="kaifuku-sub">越谷・川口で3店舗。あなたの通いやすい場所でお待ちしています。</p>
+    <p class="kaifuku-sub">国家資格者による鍼灸施術にも対応しています。<br>越谷・川口で3店舗。あなたの通いやすい場所でお待ちしています。</p>
   </div>
 </div>
 
@@ -1093,6 +1098,10 @@ details[open] .qa-toggle{transform:rotate(45deg);}
             <p class="si-label">受付時間</p>
             <p class="si-value">月〜金 10:00〜21:00 ／ 土 9:00〜18:00<br>日曜・祝日 休み</p>
           </div>
+        </div>
+        <div class="store-kids">
+          <img src="images/kids.jpg" alt="越谷院のキッズスペース" loading="lazy">
+          <p><b>キッズスペース有・お子様連れ歓迎（越谷院）</b><br>お子様連れでも安心して通院いただけます。</p>
         </div>
         <a class="store-tel" href="tel:0489406665">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
@@ -1244,78 +1253,47 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 
 <script>
 (function(){
-  var startEl = document.getElementById('sim-start');
-  var endEl   = document.getElementById('sim-end');
-  var daysEl  = document.getElementById('sim-days');
-  var btn     = document.getElementById('sim-calc');
-  var errBox  = document.getElementById('sim-error');
-  var result  = document.getElementById('sim-result');
-  var amount  = document.getElementById('sim-amount');
-  var detail  = document.getElementById('sim-detail');
+  var weekBox = document.getElementById('sim-week');
+  var tbody   = document.getElementById('sim-tbody');
+  var buttons = weekBox.querySelectorAll('button[data-week]');
+  var PERIODS = [
+    { label:'1ヶ月', days:30 },
+    { label:'2ヶ月', days:60 },
+    { label:'3ヶ月', days:90 },
+    { label:'6ヶ月', days:180 }
+  ];
 
-  function showError(msg){
-    errBox.innerHTML = msg;
-    errBox.classList.add('show');
-    result.classList.remove('show');
+  // 自賠責基準：想定通院回数 = floor(週回数 × 期間日数 ÷ 7)
+  //             対象日数     = min(期間日数, 想定通院回数 × 2)
+  //             慰謝料目安   = 対象日数 × 4,300円
+  function render(week){
+    var rows = '';
+    for(var i = 0; i < PERIODS.length; i++){
+      var p = PERIODS[i];
+      var visits = Math.floor(week * p.days / 7);
+      var targetDays = Math.min(p.days, visits * 2);
+      var money = targetDays * 4300;
+      rows +=
+        '<tr>' +
+        '<th scope="row">' + p.label + '通院<small>した場合</small></th>' +
+        '<td class="cnt">約' + visits + '回</td>' +
+        '<td class="yen">' + money.toLocaleString('ja-JP') + '<small> 円</small></td>' +
+        '</tr>';
+    }
+    tbody.innerHTML = rows;
   }
-  function clearError(){
-    errBox.classList.remove('show');
-    errBox.innerHTML = '';
-  }
 
-  btn.addEventListener('click', function(){
-    clearError();
-
-    var startVal = startEl.value;
-    var endVal   = endEl.value;
-    var daysVal  = daysEl.value;
-
-    var missing = [];
-    if(!startVal) missing.push('「通院開始日」');
-    if(!endVal)   missing.push('「通院終了日」');
-    if(!daysVal)  missing.push('「治療に通った回数」');
-    if(missing.length){
-      showError(missing.join('と') + 'を入力してください。');
-      return;
+  weekBox.addEventListener('click', function(e){
+    var btn = e.target.closest('button[data-week]');
+    if(!btn) return;
+    for(var i = 0; i < buttons.length; i++){
+      buttons[i].classList.toggle('on', buttons[i] === btn);
     }
-
-    var start = new Date(startVal + 'T00:00:00');
-    var end   = new Date(endVal + 'T00:00:00');
-    var visits = parseInt(daysVal, 10);
-
-    if(isNaN(start.getTime()) || isNaN(end.getTime())){
-      showError('日付を正しく入力してください。');
-      return;
-    }
-    if(end < start){
-      showError('通院終了日が開始日より前になっています。日付をご確認ください。');
-      return;
-    }
-    if(isNaN(visits) || visits < 1){
-      showError('治療に通った回数は1日以上の数字で入力してください。');
-      return;
-    }
-
-    // 治療期間の総日数（開始日・終了日を含む）
-    var totalDays = Math.round((end - start) / 86400000) + 1;
-
-    if(visits > totalDays){
-      showError('通院日数（' + visits + '日）が治療期間の総日数（' + totalDays + '日）を超えています。入力内容をご確認ください。');
-      return;
-    }
-
-    // 自賠責基準：対象日数 = min(総日数, 実通院日数×2)
-    var targetDays = Math.min(totalDays, visits * 2);
-    var money = targetDays * 4300;
-
-    amount.textContent = money.toLocaleString('ja-JP');
-    detail.innerHTML =
-      '治療期間の総日数：<b>' + totalDays + '日</b><br>' +
-      '実通院日数 × 2：<b>' + (visits * 2) + '日</b>（通院 ' + visits + '日）<br>' +
-      '→ 対象日数は少ないほうの <b>' + targetDays + '日</b><br>' +
-      targetDays + '日 × 4,300円 ＝ <b>' + money.toLocaleString('ja-JP') + '円</b>';
-    result.classList.add('show');
+    render(parseInt(btn.getAttribute('data-week'), 10));
   });
+
+  // 初期表示：週2回
+  render(2);
 })();
 </script>
 
