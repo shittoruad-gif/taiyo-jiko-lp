@@ -8,7 +8,7 @@
 <meta name="description" content="埼玉県越谷・川口の交通事故によるむちうち・首や腰の痛みの施術なら、たいよう鍼灸整骨院へ。自賠責保険適用で窓口負担0円。国家資格者が施術、病院との併院・転院もOK。夜21時まで受付・3店舗で通いやすい。慰謝料の目安が分かる計算シミュレーター付き。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
   --orange:#f57c1f;
@@ -27,7 +27,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
-  font-family:'Zen Maru Gothic','Noto Sans JP',sans-serif;
+  font-family:'Noto Sans JP','游ゴシック',YuGothic,'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN',メイリオ,Meiryo,sans-serif;
   color:var(--text);
   background:#fff;
   line-height:1.9;
@@ -635,7 +635,7 @@ details[open] .qa-toggle{transform:rotate(45deg);}
   padding:30px 0 120px;text-align:center;font-size:12.5px;line-height:2;
   font-family:'Noto Sans JP',sans-serif;
 }
-.footer b{color:#fff;font-size:16px;display:block;margin-bottom:6px;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;}
+.footer b{color:#fff;font-size:16px;display:block;margin-bottom:6px;font-weight:900;}
 
 /* ===== 固定フッターバー ===== */
 .fixed-cta{
@@ -856,7 +856,7 @@ details[open] .qa-toggle{transform:rotate(45deg);}
       <b>【計算のしくみ（自賠責基準）】</b><br>
       自賠責保険の基準では、慰謝料は<b>【1日4,300円 × 対象日数】</b>で計算されます。<br>（対象日数＝「治療期間の総日数」と「実通院日数×2」の<b>少ないほう</b>）
     </div>
-    <p class="sim-note">※自賠責保険の基準による目安です。実際の金額は過失割合や事案により異なります。弁護士基準（裁判基準）ではこれより高くなる場合があります。詳しくは店舗でお気軽にご相談ください。</p>
+    <p class="sim-note">※1日4,300円は2020年4月1日以降に発生した事故の基準です。※自賠責保険の基準による目安であり、実際の金額は過失割合や事案により異なります（自賠責の傷害分は治療費等を含め総額120万円が上限）。弁護士基準（裁判基準）ではこれより高くなる場合があります。詳しくは店舗でお気軽にご相談ください。</p>
   </div>
 </section>
 
@@ -1262,14 +1262,15 @@ details[open] .qa-toggle{transform:rotate(45deg);}
     { label:'6ヶ月', days:180 }
   ];
 
-  // 自賠責基準：想定通院回数 = floor(週回数 × 期間日数 ÷ 7)
+  // 自賠責基準：想定通院回数 = round(週回数 × 期間日数 ÷ 7) ※四捨五入
   //             対象日数     = min(期間日数, 想定通院回数 × 2)
-  //             慰謝料目安   = 対象日数 × 4,300円
+  //             慰謝料目安   = 対象日数 × 4,300円（2020年4月1日以降の事故）
+  // 例）週2回×3ヶ月(90日) → 26回 → min(90, 52)=52日 → 223,600円
   function render(week){
     var rows = '';
     for(var i = 0; i < PERIODS.length; i++){
       var p = PERIODS[i];
-      var visits = Math.floor(week * p.days / 7);
+      var visits = Math.round(week * p.days / 7);
       var targetDays = Math.min(p.days, visits * 2);
       var money = targetDays * 4300;
       rows +=
