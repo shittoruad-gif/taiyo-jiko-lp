@@ -94,82 +94,108 @@ section{padding:52px 0 56px;scroll-margin-top:64px;}
 }
 
 /* ===== FV ===== */
-.fv{background:#fff;padding:26px 0 0;}
-.fv-in{max-width:720px;margin:0 auto;padding:0 18px;text-align:center;}
+.fv{background:#fff;padding:16px 0 0;}
+.fv-in{max-width:720px;margin:0 auto;padding:0 16px;text-align:center;}
 .fv-clinic{
-  font-weight:900;font-size:clamp(19px,5.6vw,28px);
-  letter-spacing:.04em;line-height:1.5;color:var(--text);
+  font-weight:900;font-size:clamp(18px,5.1vw,26px);
+  letter-spacing:.03em;line-height:1.4;color:var(--text);
+  white-space:nowrap;
 }
-.fv-clinic .area{font-size:.72em;display:inline-block;margin-right:.4em;}
+.fv-clinic .area{font-size:.68em;display:inline-block;margin-right:.35em;}
 .fv-clinic .name{color:var(--orange);}
-.fv-lead{
-  margin-top:6px;
-  font-weight:700;font-size:clamp(13.5px,3.8vw,17px);
-  color:var(--text);line-height:1.7;
+.fv-copy{
+  margin-top:10px;
+  font-weight:900;font-size:clamp(19px,5.7vw,29px);
+  line-height:1.8;color:var(--text);letter-spacing:.01em;
 }
-.fv-lead .em{color:var(--orange);font-weight:900;}
+.fv-copy .mk{background:linear-gradient(transparent 58%,var(--marker) 58%);padding:0 3px;}
+.fv-copy .em{color:var(--orange);}
+
+/* 旧FV大見出し（悩みセクション前に移設） */
+.intro-catch{padding:44px 0 30px;text-align:center;}
 .fv-catch{
-  margin-top:12px;
   font-weight:900;
   font-size:clamp(23px,6.6vw,36px);
   line-height:1.5;color:var(--text);
 }
 .fv-catch .em{color:var(--orange);font-size:1.1em;}
-.fv-main{
-  margin-top:18px;
-  display:grid;grid-template-columns:42% 1fr;gap:12px;
-  align-items:stretch;text-align:left;
+.fv-lead{
+  margin-top:8px;
+  font-weight:700;font-size:clamp(13.5px,3.8vw,17px);
+  color:var(--text);line-height:1.7;
 }
+
+/* FVメイン：切り抜き風スタッフ写真＋白カード縦積み */
+.fv-main{position:relative;margin-top:12px;text-align:left;}
 .fv-photo{
-  border:3px solid var(--orange);
-  border-radius:18px;overflow:hidden;
-  background:var(--cream);
-  align-self:stretch;
+  position:absolute;z-index:1;left:-16px;bottom:0;
+  width:62%;height:102%;
+  display:flex;align-items:flex-end;
+  pointer-events:none;
 }
-.fv-photo{min-height:230px;}
-.fv-photo img{width:100%;height:100%;object-fit:cover;object-position:center 22%;}
-.fv-points{display:flex;flex-direction:column;gap:9px;}
+.fv-photo img{
+  width:100%;height:100%;object-fit:cover;object-position:center top;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30px);
+  mask-image:linear-gradient(180deg,transparent 0,#000 30px);
+}
+.fv-points{
+  position:relative;z-index:2;
+  margin-left:41%;
+  display:flex;flex-direction:column;gap:8px;
+}
 .fv-point{
   background:#fff;
-  border:2.5px solid var(--orange);
-  border-radius:14px;
-  padding:9px 12px;
-  display:flex;align-items:center;gap:9px;
-  font-weight:900;font-size:clamp(13px,3.7vw,17px);
+  border:2px solid var(--orange);
+  border-radius:12px;
+  box-shadow:0 2px 8px rgba(180,120,50,.16);
+  padding:9px 10px;
+  display:flex;align-items:center;gap:8px;
+  font-weight:900;font-size:clamp(12.5px,3.5vw,16px);
   line-height:1.45;color:var(--text);
-  flex:1;
 }
-.fv-point .ic{width:28px;height:28px;flex-shrink:0;}
-.fv-point .zero{
-  width:52px;height:52px;flex-shrink:0;border-radius:50%;
-  background:var(--orange);color:#fff;
-  display:flex;align-items:center;justify-content:center;
-  font-weight:900;font-size:19px;line-height:1;
-  letter-spacing:-.02em;
+.fv-point .ic{width:34px;height:34px;flex-shrink:0;}
+.fv-point .em{color:var(--orange);}
+.fv-point .mk2{background:linear-gradient(transparent 55%,var(--marker) 55%);}
+.fv-zero{flex-wrap:wrap;column-gap:7px;row-gap:0;padding:8px 10px 7px;}
+.fv-zero .z-lbl{font-size:clamp(13.5px,3.9vw,18px);letter-spacing:.02em;}
+.fv-zero .z-num{
+  color:var(--orange);
+  font-size:clamp(30px,8.8vw,44px);font-weight:900;
+  line-height:1;letter-spacing:-.04em;
 }
-.fv-point .marker{background:linear-gradient(transparent 55%,var(--marker) 55%);}
-.fv-point small{display:block;font-size:10px;font-weight:700;color:var(--text-soft);line-height:1.45;}
+.fv-zero .z-num small{font-size:.45em;font-weight:900;}
+.fv-zero .z-note{
+  flex-basis:100%;
+  font-size:8.5px;font-weight:700;color:var(--text-soft);
+  line-height:1.45;margin-top:3px;
+}
+.fv-point-row{display:flex;gap:8px;}
+.fv-point-row .fv-point{flex:1;padding:8px 5px;gap:5px;font-size:clamp(10.5px,2.95vw,14px);line-height:1.4;letter-spacing:-.02em;white-space:nowrap;}
+.fv-point-row .fv-point .ic{width:24px;height:24px;}
 
+/* 金色3D立体文字 */
 .fv-gold{
-  margin-top:22px;
-  background:var(--cream);
-  padding:26px 16px 24px;
-  text-align:center;
+  margin-top:14px;
+  background:linear-gradient(180deg,#fff 0%,var(--cream) 30%);
+  padding:18px 0 14px;
+  text-align:center;overflow:hidden;
 }
 .gold-line{
   display:block;
-  font-weight:900;
-  font-size:clamp(30px,9vw,50px);
-  line-height:1.35;letter-spacing:.02em;
-  background:linear-gradient(180deg,#fff3bd 0%,#f6c94e 38%,#d89a10 62%,#f9df80 100%);
+  font-weight:900;white-space:nowrap;
+  font-size:clamp(37px,12.2vw,86px);
+  line-height:1.24;letter-spacing:0;
+  background:linear-gradient(180deg,#fffbe0 0%,#f8e08e 18%,#eec44f 38%,#d4a017 52%,#8a5a00 66%,#f5dd8a 80%,#c78f0c 100%);
   -webkit-background-clip:text;background-clip:text;
   color:transparent;
-  filter:drop-shadow(0 2px 0 #a06d06) drop-shadow(0 4px 3px rgba(120,80,0,.35)) drop-shadow(0 0 1px #fff);
+  filter:drop-shadow(0 1px 0 #7a4f00) drop-shadow(0 2px 0 #684300) drop-shadow(0 3px 1px rgba(70,44,0,.5)) drop-shadow(0 7px 8px rgba(95,60,0,.35));
 }
+.gold-line.l2{font-size:clamp(40px,13.4vw,94px);}
 .fv-note{
-  margin-top:14px;
+  margin-top:12px;
   font-family:'Noto Sans JP',sans-serif;
-  font-size:11px;color:#9a8f7f;line-height:1.7;
+  font-size:10px;color:#9a8f7f;line-height:1.7;
+  padding:0 14px;
 }
 
 /* ===== CTA帯＋ボタン ===== */
@@ -678,37 +704,43 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 <div class="fv">
   <div class="fv-in">
     <p class="fv-clinic"><span class="area">越谷・川口</span><span class="name">たいよう鍼灸整骨院</span></p>
-    <p class="fv-lead">交通事故に遭われた方へ。<span class="em">国家資格者在籍</span>の当院がサポートします</p>
-    <h1 class="fv-catch">その<span class="em">むちうち</span>・<br>首や腰の痛み、<br>我慢しないでください</h1>
-    <p class="fv-lead" style="margin-top:8px;">「レントゲンでは異常なし」でも、つらい症状には理由があります。</p>
+    <h1 class="fv-copy"><span class="mk">交通事故でお困りなら、</span><br><span class="mk"><span class="em">国家資格者在籍</span>の当院へ</span></h1>
 
     <div class="fv-main">
       <div class="fv-photo"><img src="images/staff.jpg" alt="たいよう鍼灸整骨院のスタッフ"></div>
       <div class="fv-points">
-        <div class="fv-point">
-          <span class="zero">0円</span>
-          <span><small>自賠責保険適用で</small>窓口負担<small>※過失割合等により異なる場合があります</small></span>
+        <div class="fv-point fv-zero">
+          <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><circle cx="27" cy="12" r="10" fill="#f57c1f"/><path d="M22.8 6.8L27 12l4.2-5.2M27 12v7.5M23.5 14h7M23.5 17h7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 32.5c4.5-4.2 9.6-5.3 14.6-3.7l7.6 2.4c2.5.8 2.1 3.8-.5 3.8H18.5h11.8l9.6-5.3c3-1.7 5.4 1.9 2.5 3.9L30.6 41.3c-2.3 1.5-5.1 1.9-7.8 1.1L4.5 37z" fill="#f57c1f"/></svg>
+          <span class="z-lbl">窓口負担</span>
+          <span class="z-num">0<small>円</small></span>
+          <small class="z-note">※自賠責保険適用の場合。過失割合等により異なることがあります</small>
         </div>
         <div class="fv-point">
-          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V7l8-4z"/><path d="M8.5 12l2.5 2.5 4.5-4.5"/></svg>
+          <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 8.6c2.8-3.6 8.3-3.9 11.1-.7 2.5 2.8 2.3 7.1-.4 9.9L24 28.6 13.3 17.8c-2.7-2.8-2.9-7.1-.4-9.9 2.8-3.2 8.3-2.9 11.1.7z" fill="#f57c1f"/><path d="M4.5 33.5c4.5-4.2 9.6-5.3 14.6-3.7l7.6 2.4c2.5.8 2.1 3.8-.5 3.8H18.5h11.8l9.6-5.3c3-1.7 5.4 1.9 2.5 3.9L30.6 42.3c-2.3 1.5-5.1 1.9-7.8 1.1L4.5 38z" fill="#f57c1f"/></svg>
           <span>保険・慰謝料の<br>手続きサポートで安心</span>
         </div>
         <div class="fv-point">
-          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
-          <span><span class="marker">夜21時まで受付！</span></span>
+          <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20" fill="#f57c1f"/><circle cx="24" cy="24" r="15" fill="#fff"/><path d="M24 14.5V24l7 4.5" stroke="#f57c1f" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="2.2" fill="#f57c1f"/></svg>
+          <span><span class="mk2">夜21時まで</span>受付！</span>
         </div>
-        <div class="fv-point">
-          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-6.8-6.5-11a6.5 6.5 0 0 1 13 0c0 4.2-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-          <span>土曜も営業中！<br>越谷・川口<span style="color:var(--orange);">3店舗</span></span>
+        <div class="fv-point-row">
+          <div class="fv-point">
+            <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="9" width="36" height="33" rx="5" fill="#f57c1f"/><path d="M15 5v7M33 5v7" stroke="#f57c1f" stroke-width="4.4" stroke-linecap="round"/><rect x="10.5" y="19" width="27" height="18.5" rx="2.5" fill="#fff"/><path d="M15.5 24.5h4M22 24.5h4M28.5 24.5h4M15.5 31h4M22 31h4M28.5 31h4" stroke="#f57c1f" stroke-width="3" stroke-linecap="round"/></svg>
+            <span>土曜も<br>営業中！</span>
+          </div>
+          <div class="fv-point">
+            <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 3.5C15.4 3.5 8.5 10.4 8.5 19c0 10.6 15.5 25.5 15.5 25.5S39.5 29.6 39.5 19c0-8.6-6.9-15.5-15.5-15.5z" fill="#f57c1f"/><circle cx="24" cy="18.5" r="6" fill="#fff"/></svg>
+            <span>越谷・川口<br><span class="em">3店舗</span></span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
   <div class="fv-gold">
-    <span class="gold-line">平日21時まで受付</span>
-    <span class="gold-line">即日対応OK！</span>
-    <p class="fv-note">受付時間：月〜金 10:00〜21:00 ／ 土 9:00〜18:00（日曜・祝日休み）<br>※窓口負担0円は自賠責保険が適用された場合です。過失割合などにより異なるケースがあります。</p>
+    <span class="gold-line">夜21時まで受付</span>
+    <span class="gold-line l2">即日対応OK！</span>
+    <p class="fv-note">受付時間：月〜金 10:00〜21:00 ／ 土 9:00〜18:00（日曜・祝日休み）</p>
   </div>
 </div>
 
@@ -740,6 +772,14 @@ details[open] .qa-toggle{transform:rotate(45deg);}
         <span class="arrow"></span>
       </a>
     </div>
+  </div>
+</div>
+
+<!-- ===== 導入見出し（FVから移設） ===== -->
+<div class="intro-catch">
+  <div class="wrap">
+    <h2 class="fv-catch">その<span class="em">むちうち</span>・<br>首や腰の痛み、<br>我慢しないでください</h2>
+    <p class="fv-lead">「レントゲンでは異常なし」でも、つらい症状には理由があります。</p>
   </div>
 </div>
 
