@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>【TOP案B】交通事故治療・むちうち施術｜たいよう鍼灸整骨院（越谷・川口）【窓口負担0円】</title>
+<meta name="description" content="埼玉県越谷・川口の交通事故によるむちうち・首や腰の痛みの施術なら、たいよう鍼灸整骨院へ。自賠責保険適用で窓口負担0円。国家資格者が施術、病院との併院・転院もOK。夜21時まで受付・3店舗で通いやすい。慰謝料の目安が分かる計算シミュレーター付き。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#f57c1f;
+  --orange-dark:#d96a10;
+  --orange-deep:#c25c08;
+  --orange-pale:#fdeedd;
+  --cream:#fdf6ec;
+  --grid-line:#eee9dc;
+  --dot:#f5c99a;
+  --marker:#ffe479;
+  --line-green:#06c755;
+  --line-green-dark:#00a63f;
+  --text:#222222;
+  --text-soft:#555555;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Noto Sans JP','游ゴシック',YuGothic,'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN',メイリオ,Meiryo,sans-serif;
+  color:var(--text);
+  background:#fff;
+  line-height:1.9;
+  font-size:16.5px;
+  overflow-x:hidden;
+}
+img,svg,iframe{max-width:100%;display:block;}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px;}
+section{padding:52px 0 56px;scroll-margin-top:64px;}
+
+/* ===== header ===== */
+.header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(8px);
+  border-bottom:2px solid var(--orange-pale);
+}
+.header-in{
+  max-width:720px;margin:0 auto;
+  display:flex;align-items:center;justify-content:center;
+  padding:10px 16px;text-align:center;
+}
+.logo{display:flex;flex-direction:column;line-height:1.35;}
+.logo b{font-size:17px;color:var(--text);letter-spacing:.03em;white-space:nowrap;font-weight:900;}
+.logo b .lg-em{color:var(--orange);}
+.logo span{font-size:10.5px;color:#9a8f7f;letter-spacing:.08em;font-family:'Noto Sans JP',sans-serif;}
+
+/* ===== 見出し2種 ===== */
+/* (a) オレンジ帯型 */
+.band-title{
+  background:var(--orange);
+  color:#fff;text-align:center;
+  font-weight:900;
+  font-size:clamp(20px,5.4vw,27px);
+  line-height:1.55;
+  padding:20px 18px;
+  position:relative;
+  letter-spacing:.03em;
+}
+.band-title::after{
+  content:"";position:absolute;left:50%;bottom:-16px;
+  transform:translateX(-50%);
+  border:17px solid transparent;
+  border-top:16px solid var(--orange);
+  border-bottom:none;
+  z-index:5;
+}
+.band-sec{padding-top:0;}
+.band-sec .wrap{padding-top:46px;}
+
+/* (b) テキスト型 */
+.t-title{text-align:center;margin-bottom:30px;line-height:1.5;}
+.t-title .small{
+  display:block;font-size:clamp(14px,3.8vw,17px);
+  font-weight:700;color:var(--text);letter-spacing:.05em;
+  margin-bottom:2px;
+}
+.t-title .big{
+  display:inline-block;
+  font-size:clamp(23px,6.4vw,32px);
+  font-weight:900;color:var(--orange);
+  padding-bottom:8px;
+  border-bottom:4px dotted var(--dot);
+}
+
+/* ===== FV ===== */
+.fv{background:#fff;padding:16px 0 0;}
+.fv-in{max-width:720px;margin:0 auto;padding:0 16px;text-align:center;}
+.fv-clinic{
+  font-weight:900;font-size:clamp(18px,5.1vw,26px);
+  letter-spacing:.03em;line-height:1.4;color:var(--text);
+  white-space:nowrap;
+}
+.fv-clinic .area{font-size:.68em;display:inline-block;margin-right:.35em;}
+.fv-clinic .name{color:var(--orange);}
+.fv-copy{
+  margin-top:10px;
+  font-weight:900;font-size:clamp(19px,5.7vw,29px);
+  line-height:1.8;color:var(--text);letter-spacing:.01em;
+}
+.fv-copy .mk{background:linear-gradient(transparent 58%,var(--marker) 58%);padding:0 3px;}
+.fv-copy .em{color:var(--orange);}
+
+/* 旧FV大見出し（悩みセクション前に移設） */
+.intro-catch{padding:44px 0 30px;text-align:center;}
+.fv-catch{
+  font-weight:900;
+  font-size:clamp(23px,6.6vw,36px);
+  line-height:1.5;color:var(--text);
+}
+.fv-catch .em{color:var(--orange);font-size:1.1em;}
+.fv-lead{
+  margin-top:8px;
+  font-weight:700;font-size:clamp(13.5px,3.8vw,17px);
+  color:var(--text);line-height:1.7;
+}
+
+/* FVメイン：切り抜き風スタッフ写真＋白カード縦積み */
+.fv-main{position:relative;margin-top:12px;text-align:left;}
+.fv-photo{
+  position:absolute;z-index:1;left:-16px;bottom:0;
+  width:62%;height:102%;
+  display:flex;align-items:flex-end;
+  pointer-events:none;
+}
+.fv-photo img{
+  width:100%;height:100%;object-fit:cover;object-position:center top;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30px);
+  mask-image:linear-gradient(180deg,transparent 0,#000 30px);
+}
+.fv-points{
+  position:relative;z-index:2;
+  margin-left:41%;
+  display:flex;flex-direction:column;gap:8px;
+}
+.fv-point{
+  background:#fff;
+  border:2px solid var(--orange);
+  border-radius:12px;
+  box-shadow:0 2px 8px rgba(180,120,50,.16);
+  padding:9px 10px;
+  display:flex;align-items:center;gap:8px;
+  font-weight:900;font-size:clamp(12.5px,3.5vw,16px);
+  line-height:1.45;color:var(--text);
+}
+.fv-point .ic{width:34px;height:34px;flex-shrink:0;}
+.fv-point .em{color:var(--orange);}
+.fv-point .mk2{background:linear-gradient(transparent 55%,var(--marker) 55%);}
+.fv-zero{flex-wrap:wrap;column-gap:7px;row-gap:0;padding:8px 10px 7px;}
+.fv-zero .z-lbl{font-size:clamp(13.5px,3.9vw,18px);letter-spacing:.02em;}
+.fv-zero .z-num{
+  color:var(--orange);
+  font-size:clamp(30px,8.8vw,44px);font-weight:900;
+  line-height:1;letter-spacing:-.04em;
+}
+.fv-zero .z-num small{font-size:.45em;font-weight:900;}
+.fv-zero .z-note{
+  flex-basis:100%;
+  font-size:8.5px;font-weight:700;color:var(--text-soft);
+  line-height:1.45;margin-top:3px;
+}
+.fv-point-row{display:flex;gap:8px;}
+.fv-point-row .fv-point{flex:1;padding:8px 5px;gap:5px;font-size:clamp(10.5px,2.95vw,14px);line-height:1.4;letter-spacing:-.02em;white-space:nowrap;}
+.fv-point-row .fv-point .ic{width:24px;height:24px;}
+
+/* 金色3D立体文字 */
+.fv-gold{
+  margin-top:14px;
+  background:linear-gradient(180deg,#fff 0%,var(--cream) 30%);
+  padding:18px 0 14px;
+  text-align:center;overflow:hidden;
+}
+.gold-line{
+  display:block;
+  font-weight:900;white-space:nowrap;
+  font-size:clamp(37px,12.2vw,86px);
+  line-height:1.24;letter-spacing:0;
+  background:linear-gradient(180deg,#fffbe0 0%,#f8e08e 18%,#eec44f 38%,#d4a017 52%,#8a5a00 66%,#f5dd8a 80%,#c78f0c 100%);
+  -webkit-background-clip:text;background-clip:text;
+  color:transparent;
+  filter:drop-shadow(0 1px 0 #7a4f00) drop-shadow(0 2px 0 #684300) drop-shadow(0 3px 1px rgba(70,44,0,.5)) drop-shadow(0 7px 8px rgba(95,60,0,.35));
+}
+.gold-line.l2{font-size:clamp(40px,13.4vw,94px);}
+.fv-note{
+  margin-top:12px;
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:10px;color:#9a8f7f;line-height:1.7;
+  padding:0 14px;
+}
+
+/* ===== FVパターンB：0円ドーン型 ===== */
+.fvb .fv-clinic{margin-bottom:0;}
+.fvb-intro{
+  margin-top:8px;
+  font-weight:900;font-size:clamp(14.5px,4.15vw,21px);
+  line-height:1.75;color:var(--text);letter-spacing:0;
+  white-space:nowrap;
+}
+.fvb-intro .mk{background:linear-gradient(transparent 58%,var(--marker) 58%);padding:0 2px;}
+.fvb-burst{
+  margin-top:12px;
+  padding:20px 0 16px;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(255,255,255,.65) 0 30%,rgba(255,255,255,0) 62%),
+    repeating-conic-gradient(from 0deg at 50% 50%,#fdeedd 0deg 9deg,#fff7ef 9deg 18deg);
+  display:flex;justify-content:center;
+}
+.fvb-circle{
+  width:min(80vw,340px);height:min(80vw,340px);
+  background:#fff;border-radius:50%;
+  border:4px solid var(--orange);
+  box-shadow:0 8px 26px rgba(194,92,8,.22);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;
+}
+.fvb-lbl{
+  display:block;
+  font-weight:900;color:var(--text);
+  font-size:clamp(19px,6vw,28px);letter-spacing:.16em;
+  line-height:1;margin-bottom:2px;
+  padding-left:.16em;
+}
+.fvb-zero{
+  display:block;
+  font-weight:900;
+  font-size:clamp(112px,38vw,178px);
+  line-height:1;letter-spacing:-.05em;
+  background:linear-gradient(180deg,#ff9c3a 0%,#f57c1f 42%,#e64a19 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff) drop-shadow(0 2px 0 #fff) drop-shadow(0 -2px 0 #fff) drop-shadow(0 6px 8px rgba(194,92,8,.35));
+}
+.fvb-zero small{font-size:.3em;font-weight:900;letter-spacing:0;}
+.fvb-note{
+  margin:8px auto 0;max-width:520px;
+  text-align:center;
+  font-size:9.5px;font-weight:700;color:var(--text-soft);
+  line-height:1.5;padding:0 20px;
+  font-family:'Noto Sans JP',sans-serif;
+}
+.fvb-badges{
+  display:flex;justify-content:center;gap:10px;
+  margin-top:12px;padding:0 16px;
+}
+.fvb-badge{
+  width:clamp(90px,27.5vw,118px);height:clamp(90px,27.5vw,118px);
+  flex-shrink:0;
+  border-radius:50%;
+  background:var(--orange);color:#fff;
+  font-weight:900;font-size:clamp(12px,3.5vw,15px);
+  line-height:1.45;letter-spacing:0;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  box-shadow:0 3px 0 var(--orange-deep),0 6px 12px rgba(245,124,31,.28);
+}
+.fvb-gold{margin-top:14px;padding-top:12px;}
+
+/* ===== CTA帯＋ボタン ===== */
+.cta-band{
+  display:block;
+  background:var(--orange);
+  color:#fff;text-decoration:none;
+  text-align:center;
+  font-weight:900;font-size:clamp(14.5px,4.2vw,22px);
+  padding:16px 10px;
+  letter-spacing:.02em;line-height:1.5;
+  white-space:nowrap;
+}
+.cta{
+  background:var(--cream);
+  padding:30px 0 40px;scroll-margin-top:64px;
+}
+.cta-title{
+  text-align:center;font-weight:900;
+  font-size:clamp(18px,5.2vw,24px);color:var(--text);
+  margin-bottom:4px;line-height:1.6;
+}
+.cta-title .em{color:var(--orange);}
+.cta-note{
+  text-align:center;font-size:13px;color:#8a7a5e;
+  margin-bottom:18px;line-height:1.8;
+  font-family:'Noto Sans JP',sans-serif;
+}
+.cta-btns{display:flex;flex-direction:column;gap:12px;max-width:480px;margin:0 auto;}
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  border-radius:16px;text-decoration:none;
+  font-weight:900;padding:15px 20px;
+  font-size:17px;letter-spacing:.02em;
+  transition:transform .15s ease;
+  position:relative;
+}
+.btn:active{transform:scale(.97);}
+.btn svg{width:24px;height:24px;flex-shrink:0;}
+.btn-line{
+  background:var(--line-green);
+  color:#fff;
+  box-shadow:0 4px 0 #049a43,0 7px 14px rgba(6,199,85,.28);
+}
+.btn-store{
+  background:var(--orange);
+  color:#fff;
+  box-shadow:0 4px 0 var(--orange-deep),0 7px 14px rgba(245,124,31,.3);
+}
+.btn small{display:block;font-size:11px;font-weight:700;opacity:.92;font-family:'Noto Sans JP',sans-serif;}
+.btn .btn-inner{display:flex;flex-direction:column;align-items:flex-start;line-height:1.35;}
+.btn .arrow{
+  position:absolute;right:16px;top:50%;
+  width:9px;height:9px;
+  border-top:3px solid rgba(255,255,255,.9);border-right:3px solid rgba(255,255,255,.9);
+  transform:translateY(-50%) rotate(45deg);
+}
+
+/* ===== 写真枠 ===== */
+.photo{
+  border-radius:20px;overflow:hidden;
+  border:1px solid #f0e6d6;
+  box-shadow:0 4px 14px rgba(160,120,60,.12);
+  margin-bottom:24px;
+}
+.photo img{width:100%;height:auto;}
+
+/* ===== 悩みチェックリスト ===== */
+.nayami{background:var(--cream);}
+.nayami-list{display:flex;flex-direction:column;gap:12px;margin-bottom:26px;}
+.nayami-item{
+  background:#fff;
+  border-radius:14px;padding:15px 16px 15px 14px;
+  display:flex;align-items:center;gap:14px;
+  font-weight:700;font-size:clamp(15px,4.3vw,18px);
+  line-height:1.6;color:var(--text);
+  box-shadow:0 2px 8px rgba(160,120,60,.08);
+}
+.nayami-item .chk{
+  width:30px;height:30px;flex-shrink:0;
+  border:3px solid var(--orange);border-radius:8px;
+  background:#fff;position:relative;
+}
+.nayami-item .chk svg{
+  position:absolute;left:-3px;top:-10px;
+  width:36px;height:36px;
+  transform:rotate(-6deg);
+}
+.nayami-close{
+  text-align:center;font-weight:900;
+  font-size:clamp(17px,4.8vw,22px);color:var(--text);
+  background:#fff;border:3px dashed var(--orange);
+  border-radius:18px;padding:20px 16px;line-height:1.8;
+}
+.nayami-close .em{color:var(--orange);font-size:1.12em;}
+
+/* ===== 3つの理由（方眼カード＋台形タグ） ===== */
+.reason-cards{display:flex;flex-direction:column;gap:22px;}
+.reason-card{
+  background-color:#fffdf7;
+  background-image:
+    repeating-linear-gradient(0deg,var(--grid-line) 0 1px,transparent 1px 18px),
+    repeating-linear-gradient(90deg,var(--grid-line) 0 1px,transparent 1px 18px);
+  border:1px solid #efe7d5;
+  border-radius:18px;
+  padding:0 18px 20px;
+  overflow:hidden;
+}
+.reason-tag{
+  display:flex;align-items:flex-start;
+  margin:0 -18px 14px;
+  position:relative;height:56px;
+}
+.reason-tag .tag{
+  background:var(--orange);color:#fff;
+  font-weight:700;font-size:clamp(12px,3.4vw,14px);
+  line-height:1.3;
+  padding:10px 58px 10px 16px;
+  clip-path:polygon(0 0,100% 0,calc(100% - 22px) 100%,0 100%);
+  display:flex;align-items:center;
+  height:44px;
+}
+.reason-tag .num{
+  position:absolute;
+  left:min(62vw,300px);top:4px;
+  font-weight:900;font-size:44px;line-height:1;
+  color:#fff;
+  text-shadow:0 0 4px var(--orange),2px 2px 0 var(--orange),-2px 2px 0 var(--orange),2px -2px 0 var(--orange),-2px -2px 0 var(--orange),0 4px 8px rgba(194,92,8,.4);
+}
+.reason-card h3{
+  font-size:clamp(18px,5.2vw,23px);
+  font-weight:900;color:var(--orange);
+  line-height:1.55;margin-bottom:12px;
+  text-align:center;
+}
+.reason-visual{
+  max-width:340px;margin:0 auto 14px;
+  border-radius:14px;overflow:hidden;
+}
+.reason-visual img{width:100%;height:auto;}
+.reason-visual.svgbox{
+  background:#fff;border:1px solid #f0e6d6;border-radius:16px;
+  padding:14px 0;
+}
+.reason-visual.svgbox svg{width:150px;height:120px;margin:0 auto;}
+.reason-card p{
+  font-size:14.5px;font-family:'Noto Sans JP',sans-serif;
+  line-height:1.9;
+}
+.reason-card p b{color:var(--orange-dark);}
+.reason-close{
+  margin-top:26px;text-align:center;
+  font-weight:900;font-size:clamp(16px,4.6vw,20px);
+  color:var(--text);line-height:1.9;
+}
+.reason-close .em{color:var(--orange);background:linear-gradient(transparent 60%,var(--orange-pale) 60%);}
+
+/* ===== 慰謝料計算 ===== */
+.sim{background:var(--cream);}
+.sim-intro{
+  text-align:center;color:var(--text-soft);font-size:14px;
+  margin:-14px auto 26px;max-width:560px;line-height:1.9;
+  font-family:'Noto Sans JP',sans-serif;
+}
+.sim-card{
+  background:#fff;border-radius:22px;
+  padding:26px 20px 24px;
+  box-shadow:0 8px 24px rgba(160,120,60,.14);
+  max-width:520px;margin:0 auto;
+}
+.sim-card-head{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  font-weight:900;font-size:17px;color:var(--orange);
+  margin-bottom:20px;padding-bottom:14px;
+  border-bottom:3px dotted var(--dot);
+}
+.sim-card-head svg{width:26px;height:26px;flex-shrink:0;}
+.sim-week-label{
+  display:block;text-align:center;
+  font-weight:900;font-size:15.5px;color:var(--text);
+  margin-bottom:10px;
+}
+.sim-week{
+  display:grid;grid-template-columns:repeat(7,1fr);gap:6px;
+  margin-bottom:20px;
+}
+.sim-week button{
+  font-family:inherit;font-weight:900;
+  font-size:clamp(13px,3.6vw,16px);line-height:1.25;
+  color:var(--orange-dark);
+  background:var(--cream);
+  border:2px solid #f0dfc6;border-radius:12px;
+  padding:10px 0 8px;cursor:pointer;
+  transition:transform .12s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.sim-week button small{
+  display:block;font-size:10px;font-weight:700;
+  font-family:'Noto Sans JP',sans-serif;
+}
+.sim-week button:active{transform:scale(.94);}
+.sim-week button.on{
+  color:#fff;background:var(--orange);
+  border-color:var(--orange);
+  box-shadow:0 3px 0 var(--orange-deep),0 5px 12px rgba(245,124,31,.3);
+}
+.sim-table-wrap{overflow-x:auto;}
+.sim-table{
+  width:100%;border-collapse:collapse;
+  animation:simpop .3s ease;
+}
+.sim-table th,.sim-table td{
+  border-bottom:1px dashed #e9d7bc;
+  padding:11px 4px;text-align:center;line-height:1.5;
+}
+.sim-table thead th{
+  background:var(--orange);color:#fff;
+  font-size:12px;font-weight:900;letter-spacing:.02em;
+  padding:9px 4px;border-bottom:none;
+}
+.sim-table thead th:first-child{border-radius:10px 0 0 10px;}
+.sim-table thead th:last-child{border-radius:0 10px 10px 0;}
+.sim-table tbody tr:last-child th,.sim-table tbody tr:last-child td{border-bottom:none;}
+.sim-table tbody th{
+  font-size:12.5px;font-weight:900;color:var(--text);
+  text-align:left;padding-left:2px;white-space:nowrap;
+}
+.sim-table tbody th small{font-weight:700;color:#9a8f7f;font-size:10px;}
+.sim-table .cnt{
+  font-size:13px;font-weight:700;color:var(--text-soft);
+  font-family:'Noto Sans JP',sans-serif;white-space:nowrap;
+}
+.sim-table .yen{
+  font-weight:900;color:var(--orange);
+  font-size:clamp(17px,4.9vw,22px);line-height:1.2;
+  white-space:nowrap;
+}
+.sim-table .yen small{font-size:.6em;}
+@keyframes simpop{
+  0%{transform:scale(.97);opacity:0;}
+  100%{transform:scale(1);opacity:1;}
+}
+.sim-formula{
+  margin:24px auto 0;max-width:520px;
+  background:#fff;
+  border:2px solid var(--orange);
+  border-radius:16px;padding:16px 18px;
+  color:var(--text);font-size:13px;line-height:1.9;
+  font-family:'Noto Sans JP',sans-serif;
+}
+.sim-formula b{color:var(--orange-dark);}
+.sim-note{
+  margin:14px auto 0;max-width:520px;
+  color:#9a8f7f;font-size:11.5px;line-height:1.8;
+  font-family:'Noto Sans JP',sans-serif;
+}
+
+/* ===== 4つの安心 ===== */
+.anshin-list{display:flex;flex-direction:column;gap:20px;}
+.anshin{
+  background:#fff;border:2px solid var(--orange);border-radius:18px;
+  overflow:hidden;
+}
+.anshin-photo img{width:100%;height:190px;object-fit:cover;}
+.anshin-photo.tall img{height:230px;object-position:center 20%;}
+.anshin-head{
+  display:flex;align-items:center;gap:12px;
+  padding:14px 18px;background:var(--orange-pale);
+  border-bottom:1px solid #f6ddc0;
+}
+.anshin-num{
+  font-size:13px;font-weight:900;color:#fff;
+  background:var(--orange);border-radius:8px;
+  padding:5px 9px;line-height:1;flex-shrink:0;
+}
+.anshin-head h3{font-size:16.5px;color:var(--orange-dark);line-height:1.5;font-weight:900;}
+.anshin-body{padding:16px 18px;font-size:14px;font-family:'Noto Sans JP',sans-serif;line-height:1.9;}
+.anshin-body b{color:var(--orange-dark);}
+
+/* ===== 補償の知識 ===== */
+.hosho{background:var(--cream);}
+.hosho-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px;
+}
+.hosho-card{
+  background:#fff;border-radius:18px;
+  padding:18px 14px 16px;
+  box-shadow:0 3px 10px rgba(160,120,60,.1);
+  text-align:center;
+}
+.hosho-card .ico{
+  width:54px;height:54px;margin:0 auto 10px;border-radius:50%;
+  background:var(--orange-pale);display:flex;align-items:center;justify-content:center;
+}
+.hosho-card .ico svg{width:28px;height:28px;}
+.hosho-card h3{font-size:16px;color:var(--orange);margin-bottom:6px;font-weight:900;}
+.hosho-card p{font-size:12.5px;text-align:left;line-height:1.85;font-family:'Noto Sans JP',sans-serif;}
+.hosho-card p b{color:var(--orange-dark);}
+.hosho-note{
+  margin-top:16px;font-size:11.5px;color:#9a8f7f;line-height:1.8;
+  font-family:'Noto Sans JP',sans-serif;
+}
+@media(max-width:480px){
+  .hosho-grid{grid-template-columns:1fr;}
+  .hosho-card p{font-size:13px;}
+}
+
+/* ===== 流れ ===== */
+.flow-list{display:flex;flex-direction:column;}
+.flow-step{
+  display:flex;gap:16px;position:relative;padding-bottom:26px;
+}
+.flow-step:last-child{padding-bottom:0;}
+.flow-step::before{
+  content:"";position:absolute;left:21px;top:46px;bottom:4px;
+  width:2px;background:var(--dot);
+}
+.flow-step:last-child::before{display:none;}
+.flow-num{
+  width:44px;height:44px;flex-shrink:0;border-radius:50%;
+  background:var(--orange);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:18px;
+  position:relative;z-index:1;
+}
+.flow-body{flex:1;background:var(--cream);border-radius:16px;padding:14px 16px;}
+.flow-body h3{font-size:16px;color:var(--orange-dark);margin-bottom:4px;font-weight:900;}
+.flow-body p{font-size:14px;font-family:'Noto Sans JP',sans-serif;line-height:1.85;}
+.flow-body .tip{
+  margin-top:8px;font-size:12px;background:#fff;border-radius:10px;
+  padding:8px 10px;color:#8a6b30;border:1px dashed #e0c98f;
+}
+.flow-body .zero{color:var(--orange);font-weight:900;}
+
+/* ===== Q&A ===== */
+.qa-item{
+  background:#fff;border:2px solid var(--orange-pale);border-radius:14px;
+  margin-bottom:12px;overflow:hidden;
+}
+.qa-item summary{
+  list-style:none;cursor:pointer;
+  display:flex;align-items:flex-start;gap:12px;
+  padding:16px;font-weight:700;font-size:15px;color:var(--text);
+}
+.qa-item summary::-webkit-details-marker{display:none;}
+.qa-q,.qa-a{
+  width:28px;height:28px;flex-shrink:0;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:14px;
+}
+.qa-q{background:var(--orange);color:#fff;}
+.qa-a{background:#fff;color:var(--orange);border:2.5px solid var(--orange);}
+.qa-body{
+  display:flex;gap:12px;padding:0 16px 16px;
+  font-size:14px;font-family:'Noto Sans JP',sans-serif;line-height:1.85;
+}
+.qa-toggle{margin-left:auto;color:var(--orange);font-weight:900;flex-shrink:0;transition:transform .2s;}
+details[open] .qa-toggle{transform:rotate(45deg);}
+
+/* ===== 回復メッセージ ===== */
+.kaifuku{background:var(--cream);padding:52px 0;}
+.kaifuku-msg{
+  text-align:center;font-weight:900;
+  font-size:clamp(17px,4.8vw,23px);color:var(--text);line-height:2;
+}
+.kaifuku-msg .em{color:var(--orange);}
+.kaifuku-sub{text-align:center;font-size:14px;margin-top:12px;color:var(--text-soft);font-family:'Noto Sans JP',sans-serif;}
+
+/* ===== 店舗 ===== */
+.stores{background:#fff;}
+.hours-box{
+  background:var(--cream);border-radius:16px;
+  padding:16px 18px;margin-bottom:28px;
+  font-size:14.5px;text-align:center;line-height:1.9;
+}
+.hours-box b{color:var(--orange-dark);font-size:1.06em;}
+.hours-box .off{color:var(--orange);font-weight:900;}
+.store-card{
+  background:#fff;border:2px solid var(--orange);border-radius:20px;
+  margin-bottom:30px;overflow:hidden;
+}
+.store-body{padding:20px 18px 18px;}
+.store-card-title{
+  text-align:center;
+  font-weight:900;font-size:19px;color:var(--orange);
+  padding-bottom:8px;margin-bottom:6px;
+  border-bottom:3px dotted var(--dot);
+}
+.store-name{
+  text-align:center;font-weight:900;
+  font-size:clamp(17px,4.9vw,21px);color:var(--text);
+  line-height:1.5;margin-bottom:2px;
+}
+.store-name small{
+  display:block;font-size:12px;font-weight:700;color:#9a8f7f;
+  font-family:'Noto Sans JP',sans-serif;
+}
+.store-info{margin:12px 0 16px;}
+.si-item{
+  padding:11px 2px;border-bottom:1px dashed #f2e3cc;
+}
+.si-item:last-child{border-bottom:none;}
+.si-label{
+  display:flex;align-items:center;gap:9px;
+  font-weight:900;font-size:14.5px;color:var(--text);
+}
+.si-label::before{
+  content:"";width:13px;height:13px;border-radius:50%;
+  background:#f7b52c;flex-shrink:0;
+}
+.si-value{
+  margin-top:2px;padding-left:22px;
+  font-size:14px;font-family:'Noto Sans JP',sans-serif;line-height:1.8;
+}
+.si-value .pk{color:var(--orange-dark);font-weight:700;}
+.store-kids{
+  display:flex;align-items:center;gap:12px;
+  background:var(--cream);border:1.5px dashed var(--dot);
+  border-radius:14px;padding:10px 12px;
+  margin:0 0 16px;
+}
+.store-kids img{
+  width:96px;height:72px;object-fit:cover;
+  border-radius:10px;flex-shrink:0;
+}
+.store-kids p{
+  font-size:12.5px;line-height:1.7;
+  font-family:'Noto Sans JP',sans-serif;color:var(--text);
+}
+.store-kids p b{color:var(--orange-dark);font-size:13px;}
+.store-tel{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--orange);
+  color:#fff;text-decoration:none;
+  border-radius:16px;padding:14px 16px;
+  font-weight:900;
+  box-shadow:0 4px 0 var(--orange-deep),0 7px 14px rgba(245,124,31,.28);
+  margin-bottom:10px;
+  transition:transform .15s ease;
+}
+.store-tel:active{transform:scale(.97);}
+.store-tel svg{width:24px;height:24px;flex-shrink:0;}
+.store-tel .num{font-size:24px;letter-spacing:.02em;line-height:1.2;}
+.store-tel small{display:block;font-size:11px;font-weight:700;opacity:.92;font-family:'Noto Sans JP',sans-serif;}
+.store-line{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--line-green);
+  color:#fff;text-decoration:none;
+  border-radius:16px;padding:13px 16px;
+  font-weight:900;font-size:16px;
+  box-shadow:0 4px 0 #049a43,0 7px 14px rgba(6,199,85,.26);
+  margin-bottom:16px;
+  transition:transform .15s ease;
+}
+.store-line:active{transform:scale(.97);}
+.store-line svg{width:22px;height:22px;flex-shrink:0;}
+.store-map{margin-top:4px;border-radius:14px;overflow:hidden;border:1px solid #f0e6d6;}
+.store-map iframe{width:100%;height:260px;border:0;}
+
+/* ===== footer ===== */
+.footer{
+  background:var(--orange);color:#fff;
+  padding:30px 0 120px;text-align:center;font-size:12.5px;line-height:2;
+  font-family:'Noto Sans JP',sans-serif;
+}
+.footer b{color:#fff;font-size:16px;display:block;margin-bottom:6px;font-weight:900;}
+
+/* ===== 固定フッターバー ===== */
+.fixed-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:200;
+  background:var(--orange);
+  display:flex;
+  padding-bottom:env(safe-area-inset-bottom);
+  box-shadow:0 -4px 16px rgba(160,80,0,.3);
+}
+.fixed-cta a{
+  flex:1;
+  display:flex;align-items:center;justify-content:center;gap:5px;
+  color:#fff;text-decoration:none;
+  font-weight:900;font-size:clamp(11.5px,3.2vw,15px);
+  padding:16px 3px;line-height:1.3;
+  letter-spacing:0;white-space:nowrap;
+}
+.fixed-cta a:first-child{border-right:2px solid rgba(255,255,255,.85);}
+.fixed-cta a svg{width:18px;height:18px;flex-shrink:0;}
+.fixed-cta a:active{background:var(--orange-dark);}
+
+@media(min-width:600px){
+  .anshin-photo img{height:250px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== header ===== -->
+<header class="header">
+  <div class="header-in">
+    <div class="logo">
+      <b><span class="lg-em">たいよう</span>鍼灸整骨院</b>
+      <span>越谷・川口｜交通事故施術ご案内ページ</span>
+    </div>
+  </div>
+</header>
+
+<!-- ===== 1. FV（パターンB：0円ドーン型） ===== -->
+<div class="fv fvb">
+  <div class="fv-in">
+    <p class="fv-clinic"><span class="area">越谷・川口</span><span class="name">たいよう鍼灸整骨院</span></p>
+    <h1 class="fvb-intro"><span class="mk">交通事故によるケガの施術は、</span><br><span class="mk">自賠責保険が使えます</span></h1>
+  </div>
+
+  <div class="fvb-burst">
+    <div class="fvb-circle">
+      <span class="fvb-lbl">窓口負担</span>
+      <span class="fvb-zero">0<small>円</small></span>
+    </div>
+  </div>
+  <p class="fvb-note">※自賠責保険適用の場合。過失割合等により異なることがあります</p>
+
+  <div class="fvb-badges">
+    <div class="fvb-badge">国家資格者<br>在籍</div>
+    <div class="fvb-badge">夜21時まで<br>受付</div>
+    <div class="fvb-badge">越谷・川口<br>3店舗</div>
+  </div>
+
+  <div class="fv-gold fvb-gold">
+    <span class="gold-line l2">即日対応OK！</span>
+    <p class="fv-note">受付時間：月〜金 10:00〜21:00 ／ 土 9:00〜18:00（日曜・祝日休み）</p>
+  </div>
+</div>
+
+<!-- ===== CTA① LINE ===== -->
+<a class="cta-band" href="#line-cta">＼ LINE・お電話でのご予約・ご相談 ／</a>
+<div class="cta" id="line-cta">
+  <div class="wrap">
+    <p class="cta-title">まずは<span class="em">LINEで無料相談</span>ください</p>
+    <p class="cta-note">「保険のことが分からない」「痛みが出てきた」だけでもOK。<br>お近くの店舗のLINEからどうぞ。24時間受付しています。</p>
+    <div class="cta-btns">
+      <a class="btn btn-line" href="https://line.me/R/ti/p/%40828bcxxh" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
+        <span class="btn-inner">越谷院 LINEで相談<small>越谷駅 東口 徒歩2分</small></span>
+        <span class="arrow"></span>
+      </a>
+      <a class="btn btn-line" href="https://line.me/R/ti/p/%40825gkjcw" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
+        <span class="btn-inner">川口朝日院 LINEで相談<small>駐車場あり</small></span>
+        <span class="arrow"></span>
+      </a>
+      <a class="btn btn-line" href="https://lin.ee/7lzY0n4" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
+        <span class="btn-inner">川口鳩ヶ谷院 LINEで相談<small>駐車場4台あり</small></span>
+        <span class="arrow"></span>
+      </a>
+      <a class="btn btn-store" href="#stores">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <span class="btn-inner">お電話の方は店舗一覧へ<small>3店舗の電話番号・地図はこちら</small></span>
+        <span class="arrow"></span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 導入見出し（FVから移設） ===== -->
+<div class="intro-catch">
+  <div class="wrap">
+    <h2 class="fv-catch">その<span class="em">むちうち</span>・<br>首や腰の痛み、<br>我慢しないでください</h2>
+    <p class="fv-lead">「レントゲンでは異常なし」でも、つらい症状には理由があります。</p>
+  </div>
+</div>
+
+<!-- ===== 2. 悩み共感 ===== -->
+<section class="nayami band-sec">
+  <h2 class="band-title">事故のあと、こんなことで<br>お困りではありませんか？</h2>
+  <div class="wrap">
+    <div class="photo"><img src="../images/shijutsu-neck.jpg" alt="むちうちなど首まわりの施術の様子" loading="lazy"></div>
+    <div class="nayami-list">
+      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13.5l4.5 4.5C11 14 15 8 20.5 4.5"/></svg></span>事故直後は平気だったのに、数日たって首や腰が痛み出した</div>
+      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13.5l4.5 4.5C11 14 15 8 20.5 4.5"/></svg></span>病院で「レントゲンは異常なし」と言われたが、痛み・だるさが続いている</div>
+      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13.5l4.5 4.5C11 14 15 8 20.5 4.5"/></svg></span>湿布と痛み止めだけで、このままでいいのか不安</div>
+      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13.5l4.5 4.5C11 14 15 8 20.5 4.5"/></svg></span>保険会社とのやりとりや手続きが分からず不安</div>
+      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13.5l4.5 4.5C11 14 15 8 20.5 4.5"/></svg></span>仕事が忙しく、夜や仕事帰りに通えるところを探している</div>
+      <div class="nayami-item"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13.5l4.5 4.5C11 14 15 8 20.5 4.5"/></svg></span>病院に通いながら整骨院にも通えるのか知りたい</div>
+    </div>
+    <div class="nayami-close">
+      ひとつでも当てはまる方は、<br><span class="em">今すぐご相談ください。</span><br>
+      事故後の対応は「早さ」が大切です。
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. 事故後すぐ相談すべき3つの理由 ===== -->
+<section>
+  <div class="wrap">
+    <h2 class="t-title"><span class="small">事故後「すぐに」相談すべき</span><span class="big">3つの理由</span></h2>
+    <div class="reason-cards">
+
+      <div class="reason-card">
+        <div class="reason-tag">
+          <span class="tag">事故後すぐ相談すべき理由</span>
+          <span class="num">1</span>
+        </div>
+        <h3>痛みを長引かせないため</h3>
+        <div class="reason-visual svgbox">
+          <svg viewBox="0 0 150 120" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="66" cy="38" r="18" fill="none" stroke="#f57c1f" stroke-width="3"/>
+            <path d="M66 56c-16 4-22 16-22 34" fill="none" stroke="#f57c1f" stroke-width="3" stroke-linecap="round"/>
+            <path d="M66 56c10 2 16 8 18 16" fill="none" stroke="#f57c1f" stroke-width="3" stroke-linecap="round"/>
+            <path d="M100 30l-7 12h10l-8 14" fill="none" stroke="#f57c1f" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M118 44l-5 8h7l-6 10" fill="none" stroke="#f5c99a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p>むちうちの症状は、事故から<b>数日〜数週間たってから</b>現れることが少なくありません。「大したことない」と放置すると、首・肩・腰の痛みやだるさが長引きやすくなります。後遺症を残さないためにも、早期のケアが大切です。</p>
+      </div>
+
+      <div class="reason-card">
+        <div class="reason-tag">
+          <span class="tag">事故後すぐ相談すべき理由</span>
+          <span class="num">2</span>
+        </div>
+        <h3>事故とケガの因果関係を<br>証明するため</h3>
+        <div class="reason-visual"><img src="../images/accident.jpg" alt="交通事故で破損した車両" loading="lazy"></div>
+        <p>事故から日数が空いて受診すると、<b>「そのケガは本当に事故が原因なのか」</b>を証明しにくくなります。因果関係が認められないと、自賠責保険での補償（治療費・慰謝料など）が受けにくくなる恐れがあります。</p>
+      </div>
+
+      <div class="reason-card">
+        <div class="reason-tag">
+          <span class="tag">事故後すぐ相談すべき理由</span>
+          <span class="num">3</span>
+        </div>
+        <h3>適切な補償を受けるため</h3>
+        <div class="reason-visual svgbox">
+          <svg viewBox="0 0 150 120" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="22" width="60" height="76" rx="6" fill="none" stroke="#f57c1f" stroke-width="3"/>
+            <path d="M42 40h36M42 52h36M42 64h24" stroke="#f5c99a" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="104" cy="76" r="24" fill="#fff" stroke="#f57c1f" stroke-width="3"/>
+            <path d="M97 68l7 9 7-9M97 82h14M97 88h14M104 77v16" stroke="#f57c1f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <p>治療費・交通費・慰謝料・休業損害など、交通事故の被害者が受けられる補償は多岐にわたります。<b>知らないまま我慢して損をしてしまう方が非常に多い</b>のが実情です。正しい知識を持つことが、ご自身を守ることにつながります。</p>
+      </div>
+
+    </div>
+    <p class="reason-close">迷ったら、まず相談。<br><span class="em">保険会社への連絡前でも大丈夫です。</span></p>
+  </div>
+</section>
+
+<!-- ===== 4. 慰謝料計算 ===== -->
+<section class="sim" id="simulator">
+  <div class="wrap">
+    <h2 class="t-title"><span class="small">交通事故治療でもらえる</span><span class="big">慰謝料の計算</span></h2>
+    <p class="sim-intro">通院の終了日が決まっていなくても大丈夫。<br>「週に通える回数」を選ぶだけで、期間ごとの慰謝料の目安が一覧で分かります。</p>
+
+    <div class="sim-card">
+      <div class="sim-card-head">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="3.5" rx="1" fill="#fdeedd" stroke="none"/><path d="M8.5 12.5h.01M12 12.5h.01M15.5 12.5h.01M8.5 15.7h.01M12 15.7h.01M15.5 15.7h.01M8.5 18.9h.01M12 18.9h.01M15.5 18.9h.01" stroke-width="2.4"/></svg>
+        通院慰謝料の目安を計算
+      </div>
+
+      <span class="sim-week-label" id="sim-week-label">週に通える回数を選んでください</span>
+      <div class="sim-week" id="sim-week" role="group" aria-labelledby="sim-week-label">
+        <button type="button" data-week="1">週1<small>回</small></button>
+        <button type="button" data-week="2" class="on">週2<small>回</small></button>
+        <button type="button" data-week="3">週3<small>回</small></button>
+        <button type="button" data-week="4">週4<small>回</small></button>
+        <button type="button" data-week="5">週5<small>回</small></button>
+        <button type="button" data-week="6">週6<small>回</small></button>
+        <button type="button" data-week="7">週7<small>回</small></button>
+      </div>
+
+      <div class="sim-table-wrap" aria-live="polite">
+        <table class="sim-table" id="sim-table">
+          <thead>
+            <tr><th>通院期間</th><th>想定通院回数</th><th>慰謝料の目安</th></tr>
+          </thead>
+          <tbody id="sim-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="sim-formula">
+      <b>【計算のしくみ（自賠責基準）】</b><br>
+      自賠責保険の基準では、慰謝料は<b>【1日4,300円 × 対象日数】</b>で計算されます。<br>（対象日数＝「治療期間の総日数」と「実通院日数×2」の<b>少ないほう</b>）
+    </div>
+    <p class="sim-note">※1日4,300円は2020年4月1日以降に発生した事故の基準です。※自賠責保険の基準による目安であり、実際の金額は過失割合や事案により異なります（自賠責の傷害分は治療費等を含め総額120万円が上限）。弁護士基準（裁判基準）ではこれより高くなる場合があります。詳しくは店舗でお気軽にご相談ください。</p>
+  </div>
+</section>
+
+<!-- ===== 5. 選ばれる4つの安心 ===== -->
+<section>
+  <div class="wrap">
+    <h2 class="t-title"><span class="small">たいよう鍼灸整骨院</span><span class="big">4つの安心</span></h2>
+    <div class="anshin-list">
+
+      <div class="anshin">
+        <div class="anshin-photo"><img src="../images/shijutsu-back.jpg" alt="国家資格者による丁寧な手技施術" loading="lazy"></div>
+        <div class="anshin-head"><span class="anshin-num">01</span><h3>国家資格者（柔道整復師・鍼灸師）が施術</h3></div>
+        <div class="anshin-body">施術を担当するのは、<b>柔道整復師・鍼灸師の国家資格</b>を持つスタッフです。事故によるお身体の状態を丁寧に確認しながら、首・肩・腰など症状に合わせて、お一人おひとりに合った施術を行います。「強い刺激が苦手」という方もご安心ください。</div>
+      </div>
+
+      <div class="anshin">
+        <div class="anshin-head"><span class="anshin-num">02</span><h3>自賠責保険適用で窓口負担0円・手続きもサポート</h3></div>
+        <div class="anshin-body">交通事故によるケガの施術は自賠責保険が適用され、<b>窓口でのお支払いは原則0円</b>。施術費は当院から保険会社へ直接請求するため、立て替えも不要です。保険会社への連絡の仕方など、面倒な手続きの不安にも寄り添ってサポートします。<br><span style="font-size:11.5px;color:#9a8f7f;">※過失割合などにより異なるケースがあります。</span></div>
+      </div>
+
+      <div class="anshin">
+        <div class="anshin-photo tall"><img src="../images/xray.jpg" alt="頸椎のレントゲンイメージ" loading="lazy"></div>
+        <div class="anshin-head"><span class="anshin-num">03</span><h3>病院との併院・転院OK</h3></div>
+        <div class="anshin-body">整形外科で検査・診断を受けながら、当院で施術を受ける<b>「併院」が可能</b>です。レントゲンで「異常なし」と言われた方も、筋肉や関節まわりの状態を確認しながら、一人ひとりに合わせて丁寧にケアを行います。現在ほかの医療機関・整骨院に通っている方の転院も、ご自身の意思で選択できます。</div>
+      </div>
+
+      <div class="anshin">
+        <div class="anshin-photo"><img src="../images/shijutsu-leg.jpg" alt="症状に合わせたストレッチ施術の様子" loading="lazy"></div>
+        <div class="anshin-head"><span class="anshin-num">04</span><h3>夜21時まで＆土曜も受付・3店舗で通いやすい</h3></div>
+        <div class="anshin-body">平日は<b>夜21時まで</b>、土曜も18時まで受付。お仕事帰りでも通いやすい環境です。越谷・川口朝日・川口鳩ヶ谷の<b>3店舗</b>から、ご自宅やお勤め先に近い店舗をお選びいただけます。駅近の店舗も、駐車場のある店舗もあります。</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. 補償の知識 ===== -->
+<section class="hosho band-sec">
+  <h2 class="band-title">知っておきたい<br>交通事故の補償</h2>
+  <div class="wrap">
+    <div class="hosho-grid">
+
+      <div class="hosho-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V7l8-4z"/><path d="M12 9v6M9 12h6"/></svg></div>
+        <h3>治療費</h3>
+        <p>病院・整骨院での治療費・施術費は<b>自賠責保険から支払われます</b>。窓口負担は原則0円で、立て替えの必要もありません。</p>
+      </div>
+
+      <div class="hosho-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16V8a2 2 0 0 1 2-2h9l5 5v5a1 1 0 0 1-1 1h-1"/><circle cx="8" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M10 17h5M4 16a1 1 0 0 0 1 1h1"/></svg></div>
+        <h3>交通費</h3>
+        <p>通院にかかった<b>交通費も補償の対象</b>です。公共交通機関の運賃のほか、自家用車のガソリン代なども対象になります。</p>
+      </div>
+
+      <div class="hosho-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5M15.5 14.5c0 1.7-1.6 2.7-3.5 2.7s-3.5-1-3.5-2.7"/></svg></div>
+        <h3>慰謝料</h3>
+        <p>通院に対する精神的苦痛への補償です。自賠責基準では<b>1日4,300円 × 対象日数</b>（治療期間の総日数と実通院日数×2の少ないほう）が目安です。</p>
+      </div>
+
+      <div class="hosho-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#f57c1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div>
+        <h3>休業損害</h3>
+        <p>ケガの治療のために<b>仕事を休んだ分の収入も補償</b>されます。会社員だけでなく、パート・自営業・主婦（主夫）の方も対象です。</p>
+      </div>
+
+    </div>
+    <p class="hosho-note">※上記は自賠責保険の一般的な制度のご説明です。実際の補償内容・金額は、過失割合や事案の内容によって異なります。個別のケースについては、通院時にお気軽にご相談ください。</p>
+  </div>
+</section>
+
+<!-- ===== 7. 流れ5ステップ ===== -->
+<section>
+  <div class="wrap">
+    <h2 class="t-title"><span class="small">事故発生から</span><span class="big">施術開始までの流れ</span></h2>
+    <div class="flow-list">
+      <div class="flow-step">
+        <div class="flow-num">1</div>
+        <div class="flow-body">
+          <h3>警察へ連絡する</h3>
+          <p>事故に遭ったら、まず警察へ連絡を。補償の手続きに必要な「交通事故証明書」の発行につながる大切なステップです。お身体の異変を感じたら無理をせず救急要請を。</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">2</div>
+        <div class="flow-body">
+          <h3>当院へご相談ください</h3>
+          <p>LINEまたはお電話で「交通事故に遭った」とお伝えください。現在の状況を伺い、この後に必要な手順を分かりやすくご案内します。</p>
+          <div class="tip">保険会社への連絡前でも相談OK。「何から始めればいいか分からない」方こそ、お気軽に。</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">3</div>
+        <div class="flow-body">
+          <h3>病院（整形外科）で診断を受ける</h3>
+          <p>自賠責保険の適用には医師の診断が必要です。痛みが軽くても必ず受診を。まだ受診していない方には、受診の流れもご案内します。</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">4</div>
+        <div class="flow-body">
+          <h3>保険会社へ「たいよう鍼灸整骨院に通院する」と連絡</h3>
+          <p>通院先は患者さまご自身が選べます。担当者へ店舗名をお伝えいただくだけでOK。伝え方が不安な場合は当院がサポートします。</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">5</div>
+        <div class="flow-body">
+          <h3>施術スタート（<span class="zero">窓口負担0円</span>）</h3>
+          <p>お身体の状態を丁寧に確認し、症状に合わせた施術計画で回復を目指します。費用は当院から保険会社へ直接請求します。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. 中間CTA ===== -->
+<a class="cta-band" href="#line-cta">＼ LINE・お電話でのご予約・ご相談 ／</a>
+<div class="cta">
+  <div class="wrap">
+    <p class="cta-title">痛みも、手続きの不安も、<br>まとめて<span class="em">ご相談ください</span></p>
+    <p class="cta-note">相談だけでも大歓迎。無理な通院のおすすめはしません。</p>
+    <div class="cta-btns">
+      <a class="btn btn-line" href="https://line.me/R/ti/p/%40828bcxxh" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
+        <span class="btn-inner">越谷院 LINEで相談<small>越谷駅 東口 徒歩2分</small></span>
+        <span class="arrow"></span>
+      </a>
+      <a class="btn btn-line" href="https://line.me/R/ti/p/%40825gkjcw" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
+        <span class="btn-inner">川口朝日院 LINEで相談<small>駐車場あり</small></span>
+        <span class="arrow"></span>
+      </a>
+      <a class="btn btn-line" href="https://lin.ee/7lzY0n4" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
+        <span class="btn-inner">川口鳩ヶ谷院 LINEで相談<small>駐車場4台あり</small></span>
+        <span class="arrow"></span>
+      </a>
+      <a class="btn btn-store" href="#stores">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <span class="btn-inner">お電話の方は店舗一覧へ<small>3店舗の電話番号・地図はこちら</small></span>
+        <span class="arrow"></span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 9. Q&A ===== -->
+<section>
+  <div class="wrap">
+    <h2 class="t-title"><span class="small">交通事故治療の</span><span class="big">よくあるご質問</span></h2>
+
+    <details class="qa-item" open>
+      <summary><span class="qa-q">Q</span>本当に窓口負担0円で通えますか？<span class="qa-toggle">＋</span></summary>
+      <div class="qa-body"><span class="qa-a">A</span><p>自賠責保険が適用される場合、窓口でのお支払いは原則0円です。施術費は当院から保険会社へ直接請求します。過失割合などによって扱いが変わるケースもあるため、初回のご相談時に丁寧にご説明します。</p></div>
+    </details>
+
+    <details class="qa-item">
+      <summary><span class="qa-q">Q</span>病院に通いながら、整骨院にも通えますか？<span class="qa-toggle">＋</span></summary>
+      <div class="qa-body"><span class="qa-a">A</span><p>可能です。整形外科で定期的に診断を受けながら、当院で施術を受ける「併院」は一般的な通院方法です。経過の診断は病院で、日々のケアは通いやすい当院で、と役割を分けて通院される方が多くいらっしゃいます。</p></div>
+    </details>
+
+    <details class="qa-item">
+      <summary><span class="qa-q">Q</span>今通っている病院・整骨院から転院できますか？<span class="qa-toggle">＋</span></summary>
+      <div class="qa-body"><span class="qa-a">A</span><p>できます。通院先を選ぶのは患者さまご本人の権利です。保険会社へ「たいよう鍼灸整骨院に通院します」とご連絡いただくだけで手続きは完了します。伝え方が不安な方はサポートしますのでご安心ください。</p></div>
+    </details>
+
+    <details class="qa-item">
+      <summary><span class="qa-q">Q</span>事故から数日たって痛みが出てきました。今からでも大丈夫？<span class="qa-toggle">＋</span></summary>
+      <div class="qa-body"><span class="qa-a">A</span><p>むちうちは数日〜数週間後に症状が出ることが多く、決して珍しくありません。ただし、事故から時間が空くほど事故との因果関係を証明しにくくなります。痛みに気づいたら、できるだけ早く病院の診断を受け、当院へご相談ください。</p></div>
+    </details>
+
+    <details class="qa-item">
+      <summary><span class="qa-q">Q</span>保険会社から「治療の打ち切り」を打診されました。どうすれば？<span class="qa-toggle">＋</span></summary>
+      <div class="qa-body"><span class="qa-a">A</span><p>痛みが残っているのに、無理に通院を終了する必要はありません。まずはお身体の状態を確認したうえで、対応の考え方をご案内します。一人で判断して損をしてしまう前に、ご相談ください。</p></div>
+    </details>
+
+    <details class="qa-item">
+      <summary><span class="qa-q">Q</span>毎日通ってもいいですか？<span class="qa-toggle">＋</span></summary>
+      <div class="qa-body"><span class="qa-a">A</span><p>通院の頻度は、症状の状態によって適切なペースが異なります。当院では、お身体の状態を確認しながら、回復に必要な通院頻度をその都度ご提案します。「慰謝料のために多く通う」といった不適切な通院はおすすめしていません。安心してお任せください。</p></div>
+    </details>
+
+    <details class="qa-item">
+      <summary><span class="qa-q">Q</span>レントゲンで「異常なし」でも施術は受けられますか？<span class="qa-toggle">＋</span></summary>
+      <div class="qa-body"><span class="qa-a">A</span><p>受けられます。レントゲンに写るのは主に骨の状態で、むちうちの痛みの多くは筋肉・靭帯など画像に写りにくい組織の損傷が関係していると言われています。医師の診断のもと、お身体の状態に合わせた施術を行いますのでご相談ください。</p></div>
+    </details>
+
+    <details class="qa-item">
+      <summary><span class="qa-q">Q</span>予約は必要ですか？<span class="qa-toggle">＋</span></summary>
+      <div class="qa-body"><span class="qa-a">A</span><p>スムーズにご案内するため、LINEまたはお電話での事前のご連絡をおすすめしています。平日は夜21時まで、土曜は18時まで受付しています。当日のご相談もお気軽にどうぞ。</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 回復メッセージ ===== -->
+<div class="kaifuku">
+  <div class="wrap">
+    <div class="photo"><img src="../images/kaifuku.jpg" alt="痛みから解放されて穏やかに過ごす女性" loading="lazy"></div>
+    <p class="kaifuku-msg">大切なのは、痛みを我慢しないこと。<br><span class="em">事故前の毎日</span>に戻るために、<br>一緒に一歩ずつ進んでいきましょう。</p>
+    <p class="kaifuku-sub">越谷・川口で3店舗。あなたの通いやすい場所でお待ちしています。</p>
+  </div>
+</div>
+
+<!-- ===== 10. 3店舗のご案内 ===== -->
+<section class="stores band-sec" id="stores">
+  <h2 class="band-title">越谷・川口<br>3店舗のご案内</h2>
+  <div class="wrap">
+
+    <div class="hours-box">
+      全店共通 受付時間<br>
+      <b>月〜金 10:00〜21:00 ／ 土 9:00〜18:00</b><br>
+      <span class="off">日曜・祝日 休み</span>
+    </div>
+
+    <!-- 越谷院 -->
+    <div class="store-card">
+      <div class="store-body">
+        <p class="store-card-title">店舗情報</p>
+        <p class="store-name">たいよう整骨院 越谷院<small>越谷駅 東口 徒歩2分</small></p>
+        <div class="store-info">
+          <div class="si-item">
+            <p class="si-label">院名</p>
+            <p class="si-value">たいよう整骨院 越谷院</p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">住所</p>
+            <p class="si-value">〒343-0816<br>埼玉県越谷市弥生町1-12 T&amp;S 1F</p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">アクセス</p>
+            <p class="si-value">東武スカイツリーライン「越谷駅」東口 徒歩2分</p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">駐車場</p>
+            <p class="si-value"><span class="pk">提携コインパーキングあり（受付でチケットをお渡しします）</span></p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">受付時間</p>
+            <p class="si-value">月〜金 10:00〜21:00 ／ 土 9:00〜18:00<br>日曜・祝日 休み</p>
+          </div>
+        </div>
+        <div class="store-kids">
+          <img src="../images/kids.jpg" alt="越谷院のキッズスペース" loading="lazy">
+          <p><b>キッズスペース有・お子様連れ歓迎（越谷院）</b><br>お子様連れでも安心して通院いただけます。</p>
+        </div>
+        <a class="store-tel" href="tel:0489406665">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          <span><span class="num">048-940-6665</span><small>タップで電話がかかります</small></span>
+        </a>
+        <a class="store-line" href="https://line.me/R/ti/p/%40828bcxxh" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
+          越谷院 LINEで相談
+        </a>
+        <div class="store-map">
+          <iframe src="https://maps.google.com/maps?q=%E5%9F%BC%E7%8E%89%E7%9C%8C%E8%B6%8A%E8%B0%B7%E5%B8%82%E5%BC%A5%E7%94%9F%E7%94%BA1-12&z=17&output=embed" loading="lazy" title="たいよう整骨院 越谷院の地図" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- 川口朝日院 -->
+    <div class="store-card">
+      <div class="store-body">
+        <p class="store-card-title">店舗情報</p>
+        <p class="store-name">たいよう整骨院 川口朝日院<small>南鳩ヶ谷駅 徒歩10分・駐車場あり</small></p>
+        <div class="store-info">
+          <div class="si-item">
+            <p class="si-label">院名</p>
+            <p class="si-value">たいよう整骨院 川口朝日院</p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">住所</p>
+            <p class="si-value">〒332-0001<br>埼玉県川口市朝日4-19-12</p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">アクセス</p>
+            <p class="si-value">「南鳩ヶ谷駅」徒歩10分</p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">駐車場</p>
+            <p class="si-value"><span class="pk">駐車場あり（お車での通院に便利です）</span></p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">受付時間</p>
+            <p class="si-value">月〜金 10:00〜21:00 ／ 土 9:00〜18:00<br>日曜・祝日 休み</p>
+          </div>
+        </div>
+        <a class="store-tel" href="tel:0482294206">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          <span><span class="num">048-229-4206</span><small>タップで電話がかかります</small></span>
+        </a>
+        <a class="store-line" href="https://line.me/R/ti/p/%40825gkjcw" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
+          川口朝日院 LINEで相談
+        </a>
+        <div class="store-map">
+          <iframe src="https://maps.google.com/maps?q=%E5%9F%BC%E7%8E%89%E7%9C%8C%E5%B7%9D%E5%8F%A3%E5%B8%82%E6%9C%9D%E6%97%A54-19-12&z=17&output=embed" loading="lazy" title="たいよう整骨院 川口朝日院の地図" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- 川口鳩ヶ谷院 -->
+    <div class="store-card">
+      <div class="store-body">
+        <p class="store-card-title">店舗情報</p>
+        <p class="store-name">たいよう整骨院・鍼灸院 川口鳩ヶ谷院<small>駐車場4台あり・お車で通いやすい</small></p>
+        <div class="store-info">
+          <div class="si-item">
+            <p class="si-label">院名</p>
+            <p class="si-value">たいよう整骨院・鍼灸院 川口鳩ヶ谷院</p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">住所</p>
+            <p class="si-value">〒334-0005<br>埼玉県川口市里1271</p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">駐車場</p>
+            <p class="si-value"><span class="pk">駐車場4台あり（お車での通院に便利です）</span></p>
+          </div>
+          <div class="si-item">
+            <p class="si-label">受付時間</p>
+            <p class="si-value">月〜金 10:00〜21:00 ／ 土 9:00〜18:00<br>日曜・祝日 休み</p>
+          </div>
+        </div>
+        <a class="store-tel" href="tel:0484524549">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          <span><span class="num">048-452-4549</span><small>タップで電話がかかります</small></span>
+        </a>
+        <a class="store-line" href="https://lin.ee/7lzY0n4" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
+          川口鳩ヶ谷院 LINEで相談
+        </a>
+        <div class="store-map">
+          <iframe src="https://maps.google.com/maps?q=%E5%9F%BC%E7%8E%89%E7%9C%8C%E5%B7%9D%E5%8F%A3%E5%B8%82%E9%87%8C1271&z=17&output=embed" loading="lazy" title="たいよう整骨院・鍼灸院 川口鳩ヶ谷院の地図" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== 11. 最終CTA ===== -->
+<a class="cta-band" href="#line-cta">＼ LINE・お電話でのご予約・ご相談 ／</a>
+<div class="cta">
+  <div class="wrap">
+    <p class="cta-title">交通事故のお悩み、<br>ひとりで<span class="em">抱え込まないでください</span></p>
+    <p class="cta-note">相談だけでも大歓迎です。あなたの通いやすい店舗でお待ちしています。</p>
+    <div class="cta-btns">
+      <a class="btn btn-line" href="https://line.me/R/ti/p/%40828bcxxh" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
+        <span class="btn-inner">越谷院 LINEで相談<small>越谷駅 東口 徒歩2分</small></span>
+        <span class="arrow"></span>
+      </a>
+      <a class="btn btn-line" href="https://line.me/R/ti/p/%40825gkjcw" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
+        <span class="btn-inner">川口朝日院 LINEで相談<small>駐車場あり</small></span>
+        <span class="arrow"></span>
+      </a>
+      <a class="btn btn-line" href="https://lin.ee/7lzY0n4" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
+        <span class="btn-inner">川口鳩ヶ谷院 LINEで相談<small>駐車場4台あり</small></span>
+        <span class="arrow"></span>
+      </a>
+      <a class="btn btn-store" href="#stores">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <span class="btn-inner">お電話の方は店舗一覧へ<small>3店舗の電話番号・地図はこちら</small></span>
+        <span class="arrow"></span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <b>たいよう鍼灸整骨院</b>
+    越谷院・川口朝日院・川口鳩ヶ谷院<br>
+    受付：月〜金 10:00〜21:00 ／ 土 9:00〜18:00（日曜・祝日休み）<br>
+    運営：株式会社M&amp;S<br><br>
+    © Taiyo Shinkyu Seikotsuin
+  </div>
+</footer>
+
+<!-- ===== 固定フッターバー ===== -->
+<div class="fixed-cta">
+  <a href="#stores">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+    お電話でのご予約・ご相談
+  </a>
+  <a href="#line-cta">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
+    LINEで相談
+  </a>
+</div>
+
+<script>
+(function(){
+  var weekBox = document.getElementById('sim-week');
+  var tbody   = document.getElementById('sim-tbody');
+  var buttons = weekBox.querySelectorAll('button[data-week]');
+  var PERIODS = [
+    { label:'1ヶ月', days:30 },
+    { label:'2ヶ月', days:60 },
+    { label:'3ヶ月', days:90 },
+    { label:'6ヶ月', days:180 }
+  ];
+
+  // 自賠責基準：想定通院回数 = round(週回数 × 期間日数 ÷ 7) ※四捨五入
+  //             対象日数     = min(期間日数, 想定通院回数 × 2)
+  //             慰謝料目安   = 対象日数 × 4,300円（2020年4月1日以降の事故）
+  // 例）週2回×3ヶ月(90日) → 26回 → min(90, 52)=52日 → 223,600円
+  function render(week){
+    var rows = '';
+    for(var i = 0; i < PERIODS.length; i++){
+      var p = PERIODS[i];
+      var visits = Math.round(week * p.days / 7);
+      var targetDays = Math.min(p.days, visits * 2);
+      var money = targetDays * 4300;
+      rows +=
+        '<tr>' +
+        '<th scope="row">' + p.label + '通院<small>した場合</small></th>' +
+        '<td class="cnt">約' + visits + '回</td>' +
+        '<td class="yen">' + money.toLocaleString('ja-JP') + '<small> 円</small></td>' +
+        '</tr>';
+    }
+    tbody.innerHTML = rows;
+  }
+
+  weekBox.addEventListener('click', function(e){
+    var btn = e.target.closest('button[data-week]');
+    if(!btn) return;
+    for(var i = 0; i < buttons.length; i++){
+      buttons[i].classList.toggle('on', buttons[i] === btn);
+    }
+    render(parseInt(btn.getAttribute('data-week'), 10));
+  });
+
+  // 初期表示：週2回
+  render(2);
+})();
+</script>
+
+</body>
+</html>
