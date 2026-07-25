@@ -686,6 +686,85 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 @media(min-width:600px){
   .anshin-photo img{height:250px;}
 }
+
+/* ===== パターンD：参考LP完全再現型 FV ===== */
+.fvd{background:#fff;padding:16px 0 0;}
+.fvd-in{max-width:720px;margin:0 auto;padding:0 16px;}
+.fvd-clinic{
+  text-align:center;font-weight:900;white-space:nowrap;
+  font-size:clamp(20px,6.2vw,30px);letter-spacing:.01em;
+  line-height:1.35;color:var(--text);
+}
+.fvd-clinic .area{font-size:.78em;margin-right:.3em;}
+.fvd-clinic .name{color:var(--orange);}
+.fvd-hero{position:relative;margin-top:12px;}
+.fvd-badge{
+  position:absolute;left:-4px;top:0;width:30%;max-width:150px;z-index:3;
+  filter:drop-shadow(0 3px 6px rgba(140,95,0,.35));
+}
+.fvd-copy{
+  margin-left:31%;text-align:left;
+  font-weight:900;font-size:clamp(15.5px,4.9vw,23px);
+  line-height:2.05;color:var(--text);letter-spacing:0;white-space:nowrap;
+}
+.fvd-copy .mk{background:linear-gradient(transparent 58%,var(--marker) 58%);padding:0 2px;}
+.fvd-body{position:relative;margin-top:10px;}
+.fvd-photo{
+  position:absolute;z-index:1;left:-16px;top:-8px;bottom:0;width:63%;
+  pointer-events:none;
+}
+.fvd-photo img{
+  width:100%;height:100%;object-fit:cover;object-position:center top;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 26px);
+  mask-image:linear-gradient(180deg,transparent 0,#000 26px);
+}
+.fvd-cards{position:relative;z-index:2;margin-left:44%;display:flex;flex-direction:column;gap:9px;}
+.fvd-card{
+  background:#fff;border:2px solid #2f2b26;border-radius:10px;
+  box-shadow:0 3px 7px rgba(40,25,5,.16);
+  padding:12px 8px;
+  display:flex;align-items:center;justify-content:center;gap:7px;
+  font-weight:900;color:var(--text);line-height:1.4;
+}
+.fvd-card .ic{width:38px;height:38px;flex-shrink:0;}
+.fvd-zero{flex-wrap:wrap;row-gap:0;column-gap:5px;padding:10px 6px 8px;}
+.fvd-zero .lbl{font-size:clamp(14px,4vw,19px);letter-spacing:-.02em;}
+.fvd-zero .zero{
+  width:clamp(34px,9.6vw,46px);height:clamp(34px,9.6vw,46px);flex-shrink:0;
+  border-radius:50%;background:var(--orange);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:clamp(24px,6.8vw,33px);line-height:1;
+}
+.fvd-zero .yen{color:var(--orange);font-size:clamp(14px,4vw,19px);}
+.fvd-zero .note{
+  flex-basis:100%;text-align:center;
+  font-size:8.5px;font-weight:700;color:var(--text-soft);
+  line-height:1.4;margin-top:4px;
+}
+.fvd-two{justify-content:flex-start;text-align:left;padding:12px 6px 12px 10px;}
+.fvd-two .ic{width:34px;height:34px;}
+.fvd-two .txt{display:flex;flex-direction:column;line-height:1.55;}
+.fvd-two .t1{color:var(--orange);font-size:clamp(10.5px,3vw,14px);white-space:nowrap;}
+.fvd-two .t1 small{font-size:.8em;}
+.fvd-two .t2{font-size:clamp(12px,3.4vw,16px);letter-spacing:-.03em;white-space:nowrap;}
+.fvd-time{padding:14px 6px;}
+.fvd-time .ic{width:34px;height:34px;}
+.fvd-time .mk3{
+  background:linear-gradient(transparent 62%,var(--marker) 62%);
+  font-size:clamp(14px,4vw,19px);white-space:nowrap;padding:0 2px;
+}
+.fvd-time .mk3 b{color:var(--orange);font-size:1.45em;line-height:1;}
+.fvd-row{display:flex;gap:9px;}
+.fvd-row .fvd-card{
+  flex:1;padding:9px 2px;gap:5px;
+  font-size:clamp(10px,2.75vw,13px);letter-spacing:-.02em;
+  white-space:nowrap;text-align:left;line-height:1.45;
+}
+.fvd-row .fvd-card .ic{width:26px;height:26px;}
+.fvd-row .em3{color:var(--orange);}
+.fvd-gold{background:#fff;padding:12px 6px 10px;text-align:center;overflow:hidden;}
+.fvd-gold .gold-line{font-size:clamp(38px,12.9vw,92px);}
+.fvd-gold .gold-line.l2{font-size:clamp(43px,14.6vw,104px);}
 </style>
 </head>
 <body>
@@ -700,44 +779,107 @@ details[open] .qa-toggle{transform:rotate(45deg);}
   </div>
 </header>
 
-<!-- ===== 1. FV ===== -->
-<div class="fv">
-  <div class="fv-in">
-    <p class="fv-clinic"><span class="area">越谷・川口</span><span class="name">たいよう鍼灸整骨院</span></p>
-    <h1 class="fv-copy"><span class="mk">交通事故でお困りなら、</span><br><span class="mk"><span class="em">国家資格者在籍</span>の当院へ</span></h1>
+<!-- ===== 1. FV（パターンD：参考LP完全再現型） ===== -->
+<div class="fvd">
+  <div class="fvd-in">
+    <p class="fvd-clinic"><span class="area">越谷・川口</span><span class="name">たいよう鍼灸整骨院</span></p>
 
-    <div class="fv-main">
-      <div class="fv-photo"><img src="images/staff.jpg" alt="たいよう鍼灸整骨院のスタッフ"></div>
-      <div class="fv-points">
-        <div class="fv-point fv-zero">
-          <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><circle cx="27" cy="12" r="10" fill="#f57c1f"/><path d="M22.8 6.8L27 12l4.2-5.2M27 12v7.5M23.5 14h7M23.5 17h7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 32.5c4.5-4.2 9.6-5.3 14.6-3.7l7.6 2.4c2.5.8 2.1 3.8-.5 3.8H18.5h11.8l9.6-5.3c3-1.7 5.4 1.9 2.5 3.9L30.6 41.3c-2.3 1.5-5.1 1.9-7.8 1.1L4.5 37z" fill="#f57c1f"/></svg>
-          <span class="z-lbl">窓口負担</span>
-          <span class="z-num">0<small>円</small></span>
-          <small class="z-note">※自賠責保険適用の場合。過失割合等により異なることがあります</small>
-        </div>
-        <div class="fv-point">
-          <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 8.6c2.8-3.6 8.3-3.9 11.1-.7 2.5 2.8 2.3 7.1-.4 9.9L24 28.6 13.3 17.8c-2.7-2.8-2.9-7.1-.4-9.9 2.8-3.2 8.3-2.9 11.1.7z" fill="#f57c1f"/><path d="M4.5 33.5c4.5-4.2 9.6-5.3 14.6-3.7l7.6 2.4c2.5.8 2.1 3.8-.5 3.8H18.5h11.8l9.6-5.3c3-1.7 5.4 1.9 2.5 3.9L30.6 42.3c-2.3 1.5-5.1 1.9-7.8 1.1L4.5 38z" fill="#f57c1f"/></svg>
-          <span>保険・慰謝料の<br>手続きサポートで安心</span>
-        </div>
-        <div class="fv-point">
-          <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20" fill="#f57c1f"/><circle cx="24" cy="24" r="15" fill="#fff"/><path d="M24 14.5V24l7 4.5" stroke="#f57c1f" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="2.2" fill="#f57c1f"/></svg>
-          <span><span class="mk2">夜21時まで</span>受付！</span>
-        </div>
-        <div class="fv-point-row">
-          <div class="fv-point">
-            <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="9" width="36" height="33" rx="5" fill="#f57c1f"/><path d="M15 5v7M33 5v7" stroke="#f57c1f" stroke-width="4.4" stroke-linecap="round"/><rect x="10.5" y="19" width="27" height="18.5" rx="2.5" fill="#fff"/><path d="M15.5 24.5h4M22 24.5h4M28.5 24.5h4M15.5 31h4M22 31h4M28.5 31h4" stroke="#f57c1f" stroke-width="3" stroke-linecap="round"/></svg>
-            <span>土曜も<br>営業中！</span>
+    <div class="fvd-hero">
+      <!-- 金ローレルバッジ（国家資格） -->
+      <div class="fvd-badge">
+        <svg viewBox="0 0 200 232" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="国家資格 柔道整復師・鍼灸師 在籍">
+          <defs>
+            <linearGradient id="gld" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#fdf2c0"/>
+              <stop offset=".35" stop-color="#eec44f"/>
+              <stop offset=".62" stop-color="#c1860a"/>
+              <stop offset=".82" stop-color="#f5dd8a"/>
+              <stop offset="1" stop-color="#a86f04"/>
+            </linearGradient>
+            <radialGradient id="gldR" cx=".5" cy=".38" r=".75">
+              <stop offset="0" stop-color="#fdf3c8"/>
+              <stop offset=".55" stop-color="#eec44f"/>
+              <stop offset=".85" stop-color="#c1860a"/>
+              <stop offset="1" stop-color="#8a5a00"/>
+            </radialGradient>
+            <path id="lf" d="M0 9 Q5.5 0 0 -9 Q-5.5 0 0 9 Z"/>
+            <g id="lbr">
+              <use href="#lf" transform="translate(77.2 197) rotate(105)"/>
+              <use href="#lf" transform="translate(49.5 184.1) rotate(125)"/>
+              <use href="#lf" transform="translate(27.9 162.5) rotate(145)"/>
+              <use href="#lf" transform="translate(15 134.8) rotate(165)"/>
+              <use href="#lf" transform="translate(12.4 104.3) rotate(185)"/>
+              <use href="#lf" transform="translate(20.3 74.8) rotate(205)"/>
+              <use href="#lf" transform="translate(37.8 49.8) rotate(225)"/>
+              <use href="#lf" transform="translate(62.8 32.3) rotate(245)"/>
+            </g>
+          </defs>
+          <!-- リボン -->
+          <path d="M64 178 L32 218 L52 213 L59 230 L84 194 Z" fill="#b57a06"/>
+          <path d="M136 178 L168 218 L148 213 L141 230 L116 194 Z" fill="#b57a06"/>
+          <!-- 月桂樹 -->
+          <g fill="url(#gld)" stroke="#9a6a04" stroke-width=".6">
+            <use href="#lbr"/>
+            <g transform="translate(200 0) scale(-1 1)"><use href="#lbr"/></g>
+            <use href="#lf" transform="translate(100 200) rotate(90)"/>
+          </g>
+          <!-- 王冠 -->
+          <path d="M74 38 L79 12 L91 28 L100 7 L109 28 L121 12 L126 38 Z" fill="url(#gld)" stroke="#9a6a04" stroke-width="1"/>
+          <circle cx="79" cy="10" r="3.4" fill="#f5dd8a" stroke="#9a6a04" stroke-width=".8"/>
+          <circle cx="100" cy="5.5" r="3.8" fill="#f5dd8a" stroke="#9a6a04" stroke-width=".8"/>
+          <circle cx="121" cy="10" r="3.4" fill="#f5dd8a" stroke="#9a6a04" stroke-width=".8"/>
+          <!-- 円形メダル -->
+          <circle cx="100" cy="112" r="76" fill="url(#gldR)"/>
+          <circle cx="100" cy="112" r="64" fill="#fffdf3" stroke="#e0b84e" stroke-width="1.6"/>
+          <text x="100" y="97" text-anchor="middle" font-weight="900" font-size="21" fill="#7a5200" letter-spacing="1">国家資格</text>
+          <text x="100" y="125" text-anchor="middle" font-weight="900" font-size="23" fill="#7a5200" letter-spacing="0">柔道整復師</text>
+          <text x="100" y="152" text-anchor="middle" font-weight="900" font-size="20" fill="#7a5200" letter-spacing="0">鍼灸師 在籍</text>
+        </svg>
+      </div>
+
+      <h1 class="fvd-copy"><span class="mk">交通事故でお困りなら、</span><br><span class="mk">国家資格者在籍の当院へ</span></h1>
+
+      <div class="fvd-body">
+        <div class="fvd-photo"><img src="images/staff.jpg" alt="たいよう鍼灸整骨院のスタッフ"></div>
+        <div class="fvd-cards">
+
+          <div class="fvd-card fvd-zero">
+            <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><circle cx="27" cy="12" r="10" fill="#f57c1f"/><path d="M22.8 6.8L27 12l4.2-5.2M27 12v7.5M23.5 14h7M23.5 17h7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 32.5c4.5-4.2 9.6-5.3 14.6-3.7l7.6 2.4c2.5.8 2.1 3.8-.5 3.8H18.5h11.8l9.6-5.3c3-1.7 5.4 1.9 2.5 3.9L30.6 41.3c-2.3 1.5-5.1 1.9-7.8 1.1L4.5 37z" fill="#f57c1f"/></svg>
+            <span class="lbl">窓口負担</span>
+            <span class="zero">0</span><span class="yen">円</span>
+            <small class="note">※自賠責保険適用の場合</small>
           </div>
-          <div class="fv-point">
-            <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 3.5C15.4 3.5 8.5 10.4 8.5 19c0 10.6 15.5 25.5 15.5 25.5S39.5 29.6 39.5 19c0-8.6-6.9-15.5-15.5-15.5z" fill="#f57c1f"/><circle cx="24" cy="18.5" r="6" fill="#fff"/></svg>
-            <span>越谷・川口<br><span class="em">3店舗</span></span>
+
+          <div class="fvd-card fvd-two">
+            <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 10.6c2.8-3.6 8.3-3.9 11.1-.7 2.5 2.8 2.3 7.1-.4 9.9L24 30.6 13.3 19.8c-2.7-2.8-2.9-7.1-.4-9.9 2.8-3.2 8.3-2.9 11.1.7z" fill="#f57c1f"/><path d="M2.5 36.5c3.5-3.2 7.4-4.1 11.2-2.9l5.8 1.9c1.9.6 1.6 2.9-.4 2.9H14h9l7.4-4.1c2.3-1.3 4.1 1.5 1.9 3L24.5 43c-1.8 1.2-3.9 1.5-6 .9L2.5 40z" fill="#f57c1f"/><path d="M45.5 36.5c-3.5-3.2-7.4-4.1-11.2-2.9l-2.6.9" fill="none" stroke="#f57c1f" stroke-width="2.6" stroke-linecap="round"/></svg>
+            <span class="txt">
+              <span class="t1">保険活用・慰謝料<small>など</small></span>
+              <span class="t2">手続きサポートで安心</span>
+            </span>
           </div>
+
+          <div class="fvd-card fvd-time">
+            <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20" fill="#f57c1f"/><circle cx="24" cy="24" r="15" fill="#fff"/><path d="M24 14.5V24l7 4.5" stroke="#f57c1f" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="2.2" fill="#f57c1f"/></svg>
+            <span class="mk3">夜<b>21</b>時まで！</span>
+          </div>
+
+          <div class="fvd-row">
+            <div class="fvd-card">
+              <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="9" width="36" height="33" rx="5" fill="#f57c1f"/><path d="M15 5v7M33 5v7" stroke="#f57c1f" stroke-width="4.4" stroke-linecap="round"/><rect x="10.5" y="19" width="27" height="18.5" rx="2.5" fill="#fff"/><path d="M15.5 24.5h4M22 24.5h4M28.5 24.5h4M15.5 31h4M22 31h4M28.5 31h4" stroke="#f57c1f" stroke-width="3" stroke-linecap="round"/></svg>
+              <span>土曜も<br>営業中！</span>
+            </div>
+            <div class="fvd-card">
+              <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 3.5C15.4 3.5 8.5 10.4 8.5 19c0 10.6 15.5 25.5 15.5 25.5S39.5 29.6 39.5 19c0-8.6-6.9-15.5-15.5-15.5z" fill="#f57c1f"/><circle cx="24" cy="18.5" r="6" fill="#fff"/></svg>
+              <span>越谷・川口<br><span class="em3">3店舗</span></span>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
 
-  <div class="fv-gold">
+  <div class="fvd-gold">
     <span class="gold-line">夜21時まで受付</span>
     <span class="gold-line l2">即日対応OK！</span>
     <p class="fv-note">受付時間：月〜金 10:00〜21:00 ／ 土 9:00〜18:00（日曜・祝日休み）</p>
@@ -758,7 +900,7 @@ details[open] .qa-toggle{transform:rotate(45deg);}
       </a>
       <a class="btn btn-line" href="https://line.me/R/ti/p/%40825gkjcw" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
-        <span class="btn-inner">川口朝日院 LINEで相談<small>駐車場あり</small></span>
+        <span class="btn-inner">川口朝日院 LINEで相談<small>駐車場6台あり</small></span>
         <span class="arrow"></span>
       </a>
       <a class="btn btn-line" href="https://lin.ee/7lzY0n4" target="_blank" rel="noopener">
@@ -1027,7 +1169,7 @@ details[open] .qa-toggle{transform:rotate(45deg);}
       </a>
       <a class="btn btn-line" href="https://line.me/R/ti/p/%40825gkjcw" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
-        <span class="btn-inner">川口朝日院 LINEで相談<small>駐車場あり</small></span>
+        <span class="btn-inner">川口朝日院 LINEで相談<small>駐車場6台あり</small></span>
         <span class="arrow"></span>
       </a>
       <a class="btn btn-line" href="https://lin.ee/7lzY0n4" target="_blank" rel="noopener">
@@ -1131,7 +1273,7 @@ details[open] .qa-toggle{transform:rotate(45deg);}
           </div>
           <div class="si-item">
             <p class="si-label">駐車場</p>
-            <p class="si-value"><span class="pk">提携コインパーキングあり（受付でチケットをお渡しします）</span></p>
+            <p class="si-value"><span class="pk">提携駐車場あり</span></p>
           </div>
           <div class="si-item">
             <p class="si-label">受付時間</p>
@@ -1160,7 +1302,7 @@ details[open] .qa-toggle{transform:rotate(45deg);}
     <div class="store-card">
       <div class="store-body">
         <p class="store-card-title">店舗情報</p>
-        <p class="store-name">たいよう整骨院 川口朝日院<small>南鳩ヶ谷駅 徒歩10分・駐車場あり</small></p>
+        <p class="store-name">たいよう整骨院 川口朝日院<small>南鳩ヶ谷駅 徒歩10分・駐車場6台あり</small></p>
         <div class="store-info">
           <div class="si-item">
             <p class="si-label">院名</p>
@@ -1176,7 +1318,7 @@ details[open] .qa-toggle{transform:rotate(45deg);}
           </div>
           <div class="si-item">
             <p class="si-label">駐車場</p>
-            <p class="si-value"><span class="pk">駐車場あり（お車での通院に便利です）</span></p>
+            <p class="si-value"><span class="pk">駐車場6台あり（お車での通院に便利です）</span></p>
           </div>
           <div class="si-item">
             <p class="si-label">受付時間</p>
@@ -1251,7 +1393,7 @@ details[open] .qa-toggle{transform:rotate(45deg);}
       </a>
       <a class="btn btn-line" href="https://line.me/R/ti/p/%40825gkjcw" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.4 7.4 8 8.1.3.1.7.2.8.5.1.2.1.6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3C20.4 13.9 22 12.2 22 10.2 22 5.7 17.5 2 12 2z"/></svg>
-        <span class="btn-inner">川口朝日院 LINEで相談<small>駐車場あり</small></span>
+        <span class="btn-inner">川口朝日院 LINEで相談<small>駐車場6台あり</small></span>
         <span class="arrow"></span>
       </a>
       <a class="btn btn-line" href="https://lin.ee/7lzY0n4" target="_blank" rel="noopener">
